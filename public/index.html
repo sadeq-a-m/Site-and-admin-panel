@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
+<title>document</title>
+</head>
+<body>
+
+<!-- header panel -->
+<header class="bg-dark">
+  <div class="input-group input-group-sm">
+    <div class="input-group-append">
+	  <button class="btn btn-primary fas fa-search" id="btnNavbarSearch"></button>
+	</div>
+	<input type="text" class="form-control" placeholder="Search"/>
+  </div>
+  
+  <div class="hamburger">
+    <div class="lines line1"></div>
+    <div class="lines line2"></div>
+    <div class="lines line3"></div>
+  </div>
+  
+  <div class="admin-profile">
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary btn-admin-profile dropdown-toggle">
+        <i class="fas fa-user"></i>
+      </button>
+      <div class="admin-submenu">
+        <a class="" href="#">Normal</a>
+        <a class="" href="#">Active</a>
+		<hr>
+        <a class="" href="#">Disabled</a>
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+<main class="main">
+<!-- sidebar control panel -->
+<nav class="sidebar bg-dark">
+  <div class="menubar bg-dark">
+    <div class="section1">
+	  <p>CORE</p>
+	  <a href="#"><i class="fa fa-tachometer"></i>Dashboard</a>
+	</div>
+    <div class="section2">
+	  <p>INTERFACE</p>
+	  <a href="#" class="link"><i class="fas fa-columns"></i>Layout<i class="fas fa-angle-right"></i></a>
+	    <div class="sub1">
+	      <ul>
+	        <li><a href="#">Static Navigation</a></li>
+	        <li><a href="#">Light Sidenav</a></li>
+	      </ul>
+	    </div>
+	  <a href="#" class="link"><i class="fa fa-files-o"></i>Pages<i class="fas fa-angle-right"></i></a>
+	    <div class="sub2">
+	      <ul>
+	        <li><a href="#" class="link">Authentication<i class="fas fa-angle-right"></i></a>
+			  <div class="sub-menu1">
+			    <ul>
+				  <li><a href="#">Login</a></li>
+	              <li><a href="#">Register</a></li>
+	              <li><a href="#">Forgot</a></li>
+				</ul>
+			  </div>
+			</li>
+	        <li><a href="#" class="link">Error<i class="fas fa-angle-right"></i></a>
+			  <div class="sub-menu2">
+			    <ul>
+				  <li><a href="#">401 Page</a></li>
+	              <li><a href="#">404 Page</a></li>
+	              <li><a href="#">500 Page</a></li>
+				</ul>
+			  </div>
+			</li>
+		  </ul>
+	    </div>
+	</div>
+    <div class="section3">
+	  <p>ADDONS</p>
+	    <a href="#"><i class="fas fa-chart-area"></i>Charts</a>
+	    <a href="#"><i class="fas fa-table"></i>Tabels</a>
+	</div>
+  </div>
+</nav>
+
+<div class="body">
+  <h1>salam bar donya</h1>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
