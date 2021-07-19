@@ -3,16 +3,7 @@
 	padding:0;
 	border:0;
 }
-@font-face{
-	font-family:'vazir-bold';
-	src:url('font/Vazir-Bold.ttf');
-}
-@font-face{
-	font-family:'far-roya';
-	src:url('font/Far.Roya Bold.ttf');
-}
 body{
-	font-family:'vazir-bold','far-roya';
 	background-color:#5682f1;
 }
 .login{

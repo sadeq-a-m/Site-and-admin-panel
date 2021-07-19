@@ -244,10 +244,6 @@ main{
 	display:flex;
 	justify-content:center;
 }
-.table-holder{
-	width:90%;
-}
-
 
 
 @media (max-width:768px){

@@ -244,10 +244,12 @@ main{
 	display:flex;
 	justify-content:center;
 }
-.table-holder{
+.page-content form{
 	width:90%;
 }
-
+.page-content form textarea{
+	height:300px;
+}
 
 
 @media (max-width:768px){
@@ -280,9 +282,6 @@ main{
 		font-size:20px;
 	}
 }
-
-
-
 
 
 

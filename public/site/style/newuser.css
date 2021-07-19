@@ -4,7 +4,7 @@
 	box-sizing:border-box;
 }
 body{
-	
+
 }
 ul{
 	list-style:none;
@@ -244,10 +244,12 @@ main{
 	display:flex;
 	justify-content:center;
 }
-.table-holder{
-	width:90%;
+.forms{
+	margin:20px;
 }
-
+.forms div{
+	padding:10px;
+}
 
 
 @media (max-width:768px){
