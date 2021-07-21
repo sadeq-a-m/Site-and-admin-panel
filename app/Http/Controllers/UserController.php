@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequesst;
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -21,7 +23,7 @@ class UserController extends Controller
 
     public function main()
     {
-        return view('users.index')     ;
+        return view('users.index' , ['users' => User::all()])     ;
     }
 
     /**
@@ -40,9 +42,13 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequesst $request)
     {
-        //
+
+       $data =  $request->all()     ;
+       $data['password']  = bcrypt($data['password']) ;
+       User::create($data)  ;
+       return redirect(route('panel.users'))   ;
     }
 
     /**

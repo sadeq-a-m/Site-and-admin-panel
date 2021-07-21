@@ -19,33 +19,19 @@
             </tr>
             </thead>
             <tbody>
+            @foreach($users as $user)
             <tr>
-                <td>1</td>
-                <td>sadeq</td>
-                <td>sadeqmoradi1997@gmail.com</td>
+
+                <td>{{$user->id}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
                 <td>مدیرکل</td>
-                <td>2 روز قبل</td>
+                <td>{{$user->created_at}}</td>
                 <td><button class="btn btn-warning">بروزرسانی</button></td>
                 <td><button class="btn btn-danger">حذف کاربر</button></td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>mohhamad</td>
-                <td>mohammad.rasoul.mohebi@gmail.com‬</td>
-                <td>مدیرکل</td>
-                <td>2 روز قبل</td>
-                <td><button class="btn btn-warning">بروزرسانی</button></td>
-                <td><button class="btn btn-danger">حذف کاربر</button></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
+
+            @endforeach
             </tbody>
         </table>
         <div class="">

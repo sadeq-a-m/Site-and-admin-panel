@@ -3,22 +3,35 @@
 
 @section('content')
 
+
+
+
     <div class="forms col-8">
-        <form action="#" method="post">
+        <form action="{{route('panel.store')}}" method="post">
+            @csrf
             <div class="form-group">
                 <label for="Name">نام: </label>
-                <input type="text" id="Name" class="form-control" placeholder="لطفا نام کاربر را وارد کنید" required autofocus>
+                <input  name="name" type="text" id="Name" class="form-control" placeholder="لطفا نام کاربر را وارد کنید">
+                @if($errors->has('name'))
+                    <p style="color: red">{{ $errors->first('name') }}</p>
+                @endif
             </div>
             <div class="form-group">
                 <label for="Email">ایمیل: </label>
-                <input type="email" id="Email" class="form-control" placeholder="لطفا ایمیل کاربر را وارد کنید" required>
+                <input  name="email" type="email" id="Email" class="form-control" placeholder="لطفا ایمیل کاربر را وارد کنید">
+                @if($errors->has('email'))
+                    <p style="color: red">{{ $errors->first('email') }}</p>
+                @endif
             </div>
             <div class="form-group">
                 <label for="Password">رمز عبور: </label>
-                <input type="password" id="Password" class="form-control" placeholder="لطفا رمز ورود کاربر را وارد کنید" required>
+                <input name="password" type="password" id="Password" class="form-control" placeholder="لطفا رمز ورود کاربر را وارد کنید">
+                @if($errors->has('password'))
+                    <p style="color: red">{{ $errors->first('password') }}</p>
+                @endif
             </div>
             <div class="form-group">
-                <select class="form-group">
+                <select class="form-group" name="role">
                     <option value="simple user">کاربر عضو</option>
                     <option value="admin">ادمین</option>
                     <option value="director site">مدیر سایت</option>
@@ -26,7 +39,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <input type="submit" value="submit" class="btn btn-primary form-control">
+                <input type="submit" value="ارسال" class="btn btn-primary form-control">
             </div>
         </form>
     </div>
