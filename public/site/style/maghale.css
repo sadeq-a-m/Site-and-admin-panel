@@ -1,0 +1,287 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+body{
+	
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#fff;
+}
+.control-panel{
+	display:flex;
+}
+.main-content{
+	width:100%;
+}
+
+/* header page control panel styles */
+header{
+	width:100%;
+	height:50px;
+	background-color:#3c8dbc;
+	position:relative;
+}
+header nav{
+	display:flex;
+	align-items:center;
+	height:100%;
+}
+header ul{
+	list-style:none;
+	margin:0;
+	padding-left:5px;
+	height:100%;
+}
+header ul li{
+	display:inline-block;
+	float:left;
+	padding:10px 15px;
+	height:100%;
+}
+header ul li:hover{
+	background-color:#00027b;
+}
+header ul li a:hover{
+	color:#fff;
+}
+header .label{
+	padding:1px;
+	margin:2px;
+	border-radius:2px;
+}
+header .user-image{
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	max-width:100%;
+}
+.bars{
+	position:absolute;
+	right:15px;
+	top:8px;
+	color:#fff;
+	font-size:22px;
+}
+.bars:hover{
+	color:#e8e5e5;
+}
+
+
+/* sidebar menu navigation styles */
+.navbar{
+	width:260px;
+	height:100vh;
+	color:#fff;
+	visibility:visible;
+	opacity:1;
+	transition:200ms;
+	padding:0;
+	z-index:2;
+}
+.menu-nav{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.user-panel{
+	height:60px;
+}
+.user-panel .user-img{
+	position:absolute;
+	right:0;
+	width:30%;
+	padding-right:5px;
+}
+.user-panel .user-img img{
+	max-width:100%;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+}
+.user-panel .user-name{
+	position:absolute;
+	left:0;
+	width:70%;
+	padding-right:5px;
+}
+.user-name .fa-circle{
+	color:green;
+}
+.menu-nav h2{
+	color:#fff;
+	font-size:2em;
+	text-align:center;
+	height:50px;
+	background-color:#367fa9;
+}
+.menu-nav .times{
+	display:none;
+}
+.search-box{
+	width:100%;
+	margin:11px;
+}
+.search-box div{
+	position:relative;
+	width:90%;
+}
+.search-box input{
+	background-color:#374850;
+	border:none;
+	outline:none;
+	width:100%;
+	padding:5px;
+	border-radius:5px;
+}
+.search-box span{
+	position:absolute;
+	top:50%;
+	left:20px;
+	color:#888;
+	transform:translate(-50%,-50%);
+}
+.search-box input:focus{
+	background-color:#fff;
+	color:#222;
+}
+.menu-nav ul{
+	margin-right:15px;
+}
+.menu li{
+	width:110%;
+}
+.menu li a{ 
+	color:#b8c7ce;
+}
+.menu li a:hover{
+	color:#fff;
+}
+.menu .arrow{
+	float:left;
+	font-weight:800;
+	font-size:18px;
+	transition:200ms;
+	transform:rotate(0%);
+}
+.submenu1{
+	transform:rotateX(90deg);
+	height:0px;
+	transition:200ms;
+}
+.submenu1 a{
+	display:block;
+}
+.title{
+	padding:10px;
+	text-align:center;
+}
+.title .fa-tachometer{
+	float:right;
+	margin:7px 0;
+}
+.title .label{
+	float:left;
+	background-color:#00a65a;
+	padding:0px 10px 4px;
+	border-radius:3px;
+}
+li{
+	padding:10px 0;
+}
+
+
+/* after styles Clicking on the nav icon */
+.deactive-navbar{
+	width:0;
+	opacity:0;
+	visibility:hidden;
+}
+.active-arrow{
+	transform:rotate(-90deg);
+}
+.active-submenu{
+	transform:rotateX(0deg);
+	height:auto;
+	margin:10px 0;
+}
+
+
+/* Styles of the main part of the control panel */
+main{
+	display:flex;
+	height:100%;
+	width:100%;
+	position:relative;
+}
+
+/* Styles of Control Panel Settings */
+.setting{
+	width:0px;
+	min-height:100vh;
+	transition:200ms;
+	position:absolute;
+	z-index:1;
+}
+.setting ul{
+	float:right;
+	margin:20px;
+}
+.active-setting{
+	width:220px;
+}
+
+/* Styles in the middle of the page */
+.page-content{
+	width:100%;
+	display:flex;
+	justify-content:center;
+}
+.page-content form{
+	width:90%;
+}
+.page-content form textarea{
+	height:300px;
+}
+
+
+@media (max-width:768px){
+	.navbar{
+		position:absolute;
+		right:0;
+		top:0;
+		width:0px;
+		opacity:0;
+		visibility:hidden;
+	}
+	.deactive-navbar{
+		visibility:visible;
+		width:220px;
+		opacity:1;
+	}
+	.menu-nav h2{
+		display:none;
+	}
+	.menu-nav .times{
+		width:100%;
+		height:50px;
+		display:flex;
+		align-items:center;
+		cursor:pointer;
+	}
+	.times i{
+		position:absolute;
+		left:10%;
+		font-size:20px;
+	}
+}
+
+
+
