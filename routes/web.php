@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+use Illuminate\Support\Facades\Route    ;
+
+
+
+Route::resource('panel' ,   'UserController');
+
+
+Route::get('users' , 'UserController@main')->name('panel.users') ;
