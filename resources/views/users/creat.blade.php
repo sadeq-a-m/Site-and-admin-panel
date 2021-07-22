@@ -32,10 +32,11 @@
             </div>
             <div class="form-group">
                 <select class="form-group" name="role">
-                    <option value="simple user">کاربر عضو</option>
-                    <option value="admin">ادمین</option>
-                    <option value="director site">مدیر سایت</option>
-                    <option value="director General">مدیرکل</option>
+
+                    @foreach($roles as $role)
+                    <option value="{{$role->id}}">{{$role->name}}</option>
+                    @endforeach
+
                 </select>
             </div>
             <div class="form-group">

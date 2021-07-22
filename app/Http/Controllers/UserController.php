@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequesst;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.creat')  ;
+        return view('users.creat'   ,   ['roles' => Role::all()])  ;
     }
 
     /**
@@ -45,9 +46,14 @@ class UserController extends Controller
     public function store(UserRequesst $request)
     {
 
-       $data =  $request->all()     ;
+
+       $data =  $request->except('role')     ;
+       $role =  $request->only('role')  ;
        $data['password']  = bcrypt($data['password']) ;
-       User::create($data)  ;
+      $user =  User::create($data)  ;
+
+      $user->role()->attach($role)  ;
+
        return redirect(route('panel.users'))   ;
     }
 
