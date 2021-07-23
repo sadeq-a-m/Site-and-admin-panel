@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="veiwport" content="width:device-width, initial-scale:1.0;">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="style/maghale.css">
+<link rel="stylesheet" href="style/style.css">
 <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
 <title>maghale</title>
 </head>
@@ -40,19 +41,19 @@
 	  <!-- The main part of the control panel -->
 	  <div class="page-content" dir="rtl">
 	    <form action="#" method="post">
-		  <div class="form-group mt-2">
+		  <div class="form-group">
 		    <label for="Title">عنوان مقاله: </label>
 		    <input type="text" id="Title" class="form-control"></textarea>
 		  </div>
-		  <div class="form-group mt-2">
+		  <div class="form-group">
 		    <label for="Upload">انتخاب عکس به عنوان عکس اصلی مقاله:</label>
 			<input type="file" id="Upload" class="form-control" value="upload image"/>
 		  </div>
-		  <div class="form-group mt-2">
+		  <div class="form-group">
 		    <label for="Text">متن مقاله: </label>
 		    <textarea id="Text" class="form-control"></textarea>
 		  </div>
-		  <div class="form-group mt-2">
+		  <div class="form-group">
 			<select class="form-group">
 			  <option value="Scientific">علمی</option>
 			  <option value="News">خبری</option>
@@ -62,7 +63,7 @@
 			  <option value="artistic">هنری</option>
 			 </select>
 		  </div>
-		  <div class="form-group mt-2">
+		  <div class="form-group">
 		    <button class="form-control btn btn-primary">ثبت مقاله</button>
 		  </div>
 		</form>
@@ -93,25 +94,27 @@
 		  <span class="fas fa-search"></span>
 		</div>
 	  </div>
+	  <hr/>
 	  <nav>
 	    <ul class="menu">
 		  <li class="title"><a href="index.html"><span class="fa fa-tachometer"></span><span class="text"> داشبورد <small class="label">جدید</small></span></a></li>
 		  <li><a href="#"><span class="fa fa-layer-group"></span><span class="text"> لایه های صفحه </span></a></li>
 		  <li><a href="#"><span class="fa fa-th"></span><span class="text"> ویجت ها</span></a></li>
 		  <li><a href="#"><span class="fa fa-chart-bar"></span><span class="text"> نمودارها</span></a></li>
+		  <li><a href="role.html"><span class="fa fa-user"></span><span class="text"> نقش ها</span></a></li>
 		  <li><a href="#" class="arrowEl"><span class="fa fa-users"></span><span class="text"> مدیریت کاربران <span class="arrow">></span></span></a>
 		    <div class="submenu1">
-			    <a href="newuser.html"><span class="fas fa-circle"> ثبت کاربر</span></a>
-			    <a href="userlist.html"><span class="fas fa-circle"> لیست کاربران</span></a>
-			    <a href="#"><span class="fas fa-circle"> دسترسی کاربران</span></a>
+			    <a href="newuser.html"><section class="circle"></section><span> ثبت کاربر</span></a>
+			    <a href="userlist.html"><section class="circle"></section><span> لیست کاربران</span></a>
+			    <a href="#"><section class="circle"></section><span> دسترسی کاربران</span></a>
 			</div>
 		  </li>
 		  <li><a href="#" class="arrowEl"><span class="fa fa-edit"></span><span class="text"> فرم ها <span class="arrow">></span></span></a>
-		    <div class="submenu1">
-			  <a href="login.html"><span class="fas fa-circle"> ورود</span></a>
-			  <a href="maghale.html"><span class="fas fa-circle"> ثبت مقاله</span></a>
-			  <a href="edit-maghale.html"><span class="fas fa-circle"> ویرایش مقاله</span></a>
-			</div>
+		    <section class="submenu1">
+			  <a href="login.html"><section class="circle"></section><span> ورود</span></a>
+			  <a href="maghale.html"><section class="circle"></section><span> ثبت مقاله</span></a>
+			  <a href="edit-maghale.html"><section class="circle"></section><span> ویرایش مقاله</span></a>
+			</section>
 		  </li>
 		  <li><a href="#"><span class="fa fa-table"></span><span class="text"> جداول </span></a></li>
 		  <li><a href="#"><span class="fa fa-calendar"></span><span class="text"> تقویم</span></a></li>
