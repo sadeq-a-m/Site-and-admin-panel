@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route    ;
+
+
+
+Auth::routes();
+Route::resource('panel' ,   'UserController');
+
+
+Route::get('users' , 'UserController@main')->name('panel.users') ;
+
+
+Route::get('/home', 'HomeController@index')->name('home');

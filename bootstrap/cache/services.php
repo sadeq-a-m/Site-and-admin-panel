@@ -25,13 +25,18 @@
     21 => 'Illuminate\\View\\ViewServiceProvider',
     22 => 'Facade\\Ignition\\IgnitionServiceProvider',
     23 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    24 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    25 => 'Carbon\\Laravel\\ServiceProvider',
-    26 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    27 => 'App\\Providers\\AppServiceProvider',
-    28 => 'App\\Providers\\AuthServiceProvider',
-    29 => 'App\\Providers\\EventServiceProvider',
-    30 => 'App\\Providers\\RouteServiceProvider',
+    24 => 'Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider',
+    25 => 'Intervention\\Image\\ImageServiceProvider',
+    26 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    27 => 'Laravel\\Ui\\UiServiceProvider',
+    28 => 'Carbon\\Laravel\\ServiceProvider',
+    29 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    30 => 'Intervention\\Image\\ImageServiceProvider',
+    31 => 'Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider',
+    32 => 'App\\Providers\\AppServiceProvider',
+    33 => 'App\\Providers\\AuthServiceProvider',
+    34 => 'App\\Providers\\EventServiceProvider',
+    35 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -47,12 +52,16 @@
     9 => 'Illuminate\\View\\ViewServiceProvider',
     10 => 'Facade\\Ignition\\IgnitionServiceProvider',
     11 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    12 => 'Carbon\\Laravel\\ServiceProvider',
-    13 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    14 => 'App\\Providers\\AppServiceProvider',
-    15 => 'App\\Providers\\AuthServiceProvider',
-    16 => 'App\\Providers\\EventServiceProvider',
-    17 => 'App\\Providers\\RouteServiceProvider',
+    12 => 'Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider',
+    13 => 'Intervention\\Image\\ImageServiceProvider',
+    14 => 'Carbon\\Laravel\\ServiceProvider',
+    15 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    16 => 'Intervention\\Image\\ImageServiceProvider',
+    17 => 'Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider',
+    18 => 'App\\Providers\\AppServiceProvider',
+    19 => 'App\\Providers\\AuthServiceProvider',
+    20 => 'App\\Providers\\EventServiceProvider',
+    21 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (
@@ -161,6 +170,8 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
+    'Laravel\\Ui\\AuthCommand' => 'Laravel\\Ui\\UiServiceProvider',
+    'Laravel\\Ui\\UiCommand' => 'Laravel\\Ui\\UiServiceProvider',
   ),
   'when' => 
   array (
@@ -201,6 +212,9 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
+    array (
+    ),
+    'Laravel\\Ui\\UiServiceProvider' => 
     array (
     ),
   ),
