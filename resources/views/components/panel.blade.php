@@ -17,16 +17,7 @@
 
     <div class="main-content">
         <!-- Header menu for faster management of the control panel -->
-        <header>
-            <nav>
-                <ul>
-                    <li class="cogs"><a href="#"><i class="fas fa-cogs"></i></a></li>
-                    <li><a href="#"><span>صادق علیمرادی </span><img src="image/1.jpg" class="user-image" alt="user image" style=""></a></li>
-                    <li><a href="#"><i class="fas fa-bell"></i><sup class="label bg-danger">3</sup></a></li>
-                    <a href="#" class="bars"><i class="fas fa-bars"></i></a>
-                </ul>
-            </nav>
-        </header>
+       @include('components.data_user')
 
         <!-- The main part of the control panel -->
         <main>
@@ -58,15 +49,7 @@
             <div class="times">
                 <i class="fas fa-times"></i>
             </div>
-            <div class="user-panel">
-                <div class="user-img">
-                    <img src="image/1.jpg"/>
-                </div>
-                <div class="user-name">
-                    <span>صادق علیمرادی</span><br/>
-                    <span class="fas fa-circle"></span> آنلاین
-                </div>
-            </div>
+            @include('components.sidbar-data-user')
             <div class="search-box">
                 <div>
                     <input type="text" placeholder="جستجو"/>
