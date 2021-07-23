@@ -30,7 +30,7 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => 'e2980fc932a1ef0a45910e47607b893f00956979',
+    'reference' => 'bcac1b25fe12b9b06e082f394f5e79b0cc2ba0b0',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -165,6 +165,24 @@ class InstalledVersions
       array (
       ),
       'reference' => '8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
+    ),
+    'hekmatinasser/notowo' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c51ad5dcedac966dd93ce558ac7e6a84e0020d6d',
+    ),
+    'hekmatinasser/verta' => 
+    array (
+      'pretty_version' => 'v1.12.4',
+      'version' => '1.12.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '75a9713ed2f5723b34318744614cd8b55cfb09f2',
     ),
     'illuminate/auth' => 
     array (
@@ -408,7 +426,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => 'e2980fc932a1ef0a45910e47607b893f00956979',
+      'reference' => 'bcac1b25fe12b9b06e082f394f5e79b0cc2ba0b0',
     ),
     'laravel/tinker' => 
     array (

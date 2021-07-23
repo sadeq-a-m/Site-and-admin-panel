@@ -79,7 +79,7 @@ class UserController extends ImageUploder
     {
 
         $user    =   User::find($id) ;
-        $roles   =   Role::all()    ;
+        $roles   =   Role::all()     ;
         return view('users.edit' , ['user'  =>  $user , 'roles' => $roles]) ;
     }
 
@@ -101,8 +101,10 @@ class UserController extends ImageUploder
 
         if ($request->hasFile('img_user')){
 
+            unlink('storage/users/'.$user->image)  ;
             $imageurl =  $this->uploadImage(request()->file('img_user')) ;
             $user['image']  = $imageurl ;
+
         }
 
 

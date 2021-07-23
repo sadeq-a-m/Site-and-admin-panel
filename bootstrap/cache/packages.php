@@ -17,6 +17,17 @@
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     ),
   ),
+  'hekmatinasser/verta' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Verta' => 'Hekmatinasser\\Verta\\Verta',
+    ),
+  ),
   'intervention/image' => 
   array (
     'providers' => 

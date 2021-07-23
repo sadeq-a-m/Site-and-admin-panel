@@ -12,10 +12,12 @@
                 <th>شناسه</th>
                 <th>نام</th>
                 <th>ایمیل</th>
+                <th>عکس کاربر</th>
                 <th>نقش</th>
                 <th>تاریخ ثبت نام</th>
                 <th>بروزرسانی</th>
                 <th>حذف</th>
+
             </tr>
             </thead>
             <tbody>
@@ -25,8 +27,14 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
+                @if($user->image != null)
+                <td><img src="/storage/users/{{$user->image}}" width="100px"></td>
+                @else
+                    <td>عکس ندارد.</td>
+                @endif
                 <td>مدیرکل</td>
-                <td>{{$user->created_at}}</td>
+                <td>{{\Hekmatinasser\Verta\Verta::instance($user->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
+
 
 
 
