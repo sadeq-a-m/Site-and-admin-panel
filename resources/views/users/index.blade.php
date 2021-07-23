@@ -27,8 +27,29 @@
                 <td>{{$user->email}}</td>
                 <td>مدیرکل</td>
                 <td>{{$user->created_at}}</td>
-                <td><button class="btn btn-warning">بروزرسانی</button></td>
-                <td><button class="btn btn-danger">حذف کاربر</button></td>
+
+
+
+                <td>
+
+                    <form method="get" action={{route('panel.edit'       ,   $user->id)}} >
+                        @csrf
+
+
+                        <button class="btn btn-warning">بروز رسانی</button>
+                    </form>
+                </td>
+
+
+                <td>
+                    <form method="post" action={{route('panel.destroy'  ,   $user->id)}} >
+                        @csrf
+                        @method('DELETE')
+
+
+                        <button class="btn btn-danger">حذف کاربر</button>
+                    </form>
+                </td>
             </tr>
 
             @endforeach

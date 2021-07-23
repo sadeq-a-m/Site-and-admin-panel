@@ -7,7 +7,8 @@ use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UserController extends ImageUploder
+
 {
     /**
      * Display a listing of the resource.
@@ -50,9 +51,9 @@ class UserController extends Controller
        $data =  $request->except('role')     ;
        $role =  $request->only('role')  ;
        $data['password']  = bcrypt($data['password']) ;
-      $user =  User::create($data)  ;
+       $user =  User::create($data)  ;
 
-      $user->role()->attach($role)  ;
+       $user->role()->attach($role)  ;
 
        return redirect(route('panel.users'))   ;
     }
@@ -76,7 +77,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $user    =   User::find($id) ;
+        $roles   =   Role::all()    ;
+        return view('users.edit' , ['user'  =>  $user , 'roles' => $roles]) ;
     }
 
     /**
@@ -87,8 +91,25 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
+
     {
-        //
+
+       $user    =   User::find($id) ;
+       $data    =   $request->all() ;
+
+
+
+        if ($request->hasFile('img_user')){
+
+            $imageurl =  $this->uploadImage(request()->file('img_user')) ;
+            $user['image']  = $imageurl ;
+        }
+
+
+        $user->update($data);
+        return redirect(route('panel.users'))  ;
+
+
     }
 
     /**
@@ -99,6 +120,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id)     ;
+
+        $user->delete();
+        return back() ;
     }
 }
