@@ -30,7 +30,7 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => 'bcac1b25fe12b9b06e082f394f5e79b0cc2ba0b0',
+    'reference' => '8be201bb0aecfc6567369b287b38d4a17db86f1d',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -426,7 +426,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => 'bcac1b25fe12b9b06e082f394f5e79b0cc2ba0b0',
+      'reference' => '8be201bb0aecfc6567369b287b38d4a17db86f1d',
     ),
     'laravel/tinker' => 
     array (
@@ -436,6 +436,15 @@ class InstalledVersions
       array (
       ),
       'reference' => '04ad32c1a3328081097a181875733fa51f402083',
+    ),
+    'laravel/ui' => 
+    array (
+      'pretty_version' => 'v1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '21dc7e58896db977aad246e710b4810aaab9a968',
     ),
     'league/commonmark' => 
     array (
