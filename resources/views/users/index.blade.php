@@ -32,7 +32,21 @@
                 @else
                     <td>عکس ندارد.</td>
                 @endif
-                <td>مدیرکل</td>
+
+
+                <td>
+                    <ul>
+
+                        @foreach($user->role as $role)
+
+                            <li> {{$role->name}}</li>
+
+                        @endforeach
+
+                    </ul>
+                </td>
+
+
                 <td>{{\Hekmatinasser\Verta\Verta::instance($user->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
 
 
