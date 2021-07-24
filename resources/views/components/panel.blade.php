@@ -83,13 +83,9 @@
                     <li><a href="#"><span class="fa fa-layer-group"></span><span class="text"> لایه های صفحه </span></a></li>
                     <li><a href="#"><span class="fa fa-th"></span><span class="text"> ویجت ها</span></a></li>
                     <li><a href="#"><span class="fa fa-chart-bar"></span><span class="text"> نمودارها</span></a></li>
-                    <li><a href="#" class="arrowEl"><span class="fa fa-users"></span><span class="text"> مدیریت کاربران <span class="arrow">></span></span></a>
-                        <div class="submenu1">
-                            <a href="{{route('panel.create')}}"><span class="fas fa-circle"> ثبت کاربر</span></a>
-                            <a href="{{route('panel.users')}}"><span class="fas fa-circle"> لیست کاربران</span></a>
-                            <a href="#"><span class="fas fa-circle"> دسترسی کاربران</span></a>
-                        </div>
-                    </li>
+
+                    @include('components.sidbar.users')
+                    @include('components.sidbar.roles')
                     <li><a href="#" class="arrowEl"><span class="fa fa-edit"></span><span class="text"> فرم ها <span class="arrow">></span></span></a>
                         <div class="submenu1">
                             <a href="login.html"><span class="fas fa-circle"> ورود</span></a>
