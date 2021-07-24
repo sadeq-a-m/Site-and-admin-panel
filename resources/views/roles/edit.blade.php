@@ -9,18 +9,15 @@
         <h2 class="m-2">افزودن نقش کاربری</h2>
 
 
+        <form action="{{route('update.role' , $role->id)}}" method="post">
 
-
-
-
-        <form action="{{route('store.role')}}" method="post">
             @csrf
-            @method('POST')
+            @method('PUT')
 
 
             <div class="form-group">
                 <label for="RoleUser">نقش کاربری :</label>
-                <input type="text" id="RoleUser" class="form-control" placeholder="نام نقش کاربری را وارد کنید" name="name"/>
+                <input type="text" id="RoleUser" class="form-control" placeholder="نام نقش کاربری را وارد کنید" name="name" value="{{$role->name}}"/>
                 @if($errors->has('name'))
                     <p style="color: red">{{ $errors->first('name') }}</p>
                 @endif
