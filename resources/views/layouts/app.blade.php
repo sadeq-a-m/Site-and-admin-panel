@@ -17,9 +17,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <!-- CSS only -->
+    <link rel="stylesheet" href="{{asset('/site/style/login.css')}}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
@@ -81,5 +84,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{asset('/script/script.js')}}"></script>
 </body>
 </html>

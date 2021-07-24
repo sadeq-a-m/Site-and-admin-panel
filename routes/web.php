@@ -18,10 +18,29 @@ use Illuminate\Support\Facades\Route    ;
 
 
 Auth::routes();
-Route::resource('panel' ,   'UserController');
 
 
-Route::get('users' , 'UserController@main')->name('panel.users') ;
+
+Route::middleware(['auth'])->group(function (){
+
+
+    Route::get('users' , 'UserController@main')->name('panel.users') ;
+    Route::resource('panel' ,   'UserController');
+});
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/role' , function (){
+
+    return view('roles.index')      ;
+
+})  ;
+
+
+Route::get('/create_role' , function (){
+
+    return view('roles.create') ;
+})  ;

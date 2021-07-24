@@ -17,7 +17,17 @@
 
     <div class="main-content">
         <!-- Header menu for faster management of the control panel -->
-       @include('components.data_user')
+{{--       @include('components.data_user')--}}
+        <header>
+            <nav>
+                <ul>
+                    <li class="cogs"><a href="#"><i class="fas fa-cogs"></i></a></li>
+                    <li><a href="#"><span>{{auth()->user()->name}}</span><img src="/storage/users/{{auth()->user()->image}}" class="user-image" alt="user image" style=""></a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i><sup class="label bg-danger">3</sup></a></li>
+                    <a href="#" class="bars"><i class="fas fa-bars"></i></a>
+                </ul>
+            </nav>
+        </header>
 
         <!-- The main part of the control panel -->
         <main>
@@ -49,7 +59,18 @@
             <div class="times">
                 <i class="fas fa-times"></i>
             </div>
-            @include('components.sidbar-data-user')
+{{--            @include('components.sidbar-data-user')--}}
+            <div class="user-panel">
+                <div class="user-img">
+
+
+                    <img src="/storage/users/{{auth()->user()->image}}"/>
+                </div>
+                <div class="user-name">
+                    <span>{{auth()->user()->name}}</span><br/>
+                    <span class="fas fa-circle">آنلاین</span>
+                </div>
+            </div>
             <div class="search-box">
                 <div>
                     <input type="text" placeholder="جستجو"/>
