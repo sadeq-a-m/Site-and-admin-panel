@@ -264,9 +264,8 @@ main{
 /* Styles in the middle of the page */
 .page-content{
 	width:100%;
-}
-.table-holder{
-	width:90%;
+	display:flex;
+	justify-content:center;
 }
 .page-content form{
 	width:90%;
@@ -276,6 +275,9 @@ form div{
 }
 .page-content form textarea{
 	height:250px;
+}
+.role{
+	display:block;
 }
 
 
