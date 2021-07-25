@@ -13,11 +13,10 @@ class ImageUploder extends Controller
 
 
 
-    public function uploadImage($file)
-
+    public function uploadImage($file , $directory)
     {
 
-        $imagePath = public_path('/storage/users');
+        $imagePath = public_path('/storage/'.$directory);
         $file_name = time() . "-" . $file->getClientOriginalName();
         $file = $file->move($imagePath, $file_name);
         Image::make($file)->resize(300, 200)->save($imagePath . '/' . $file_name);

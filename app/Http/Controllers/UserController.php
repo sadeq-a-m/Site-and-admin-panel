@@ -105,7 +105,7 @@ class UserController extends ImageUploder
                 unlink('storage/users/'.$user->image)  ;
             }
 
-            $imageurl =  $this->uploadImage(request()->file('img_user')) ;
+            $imageurl =  $this->uploadImage(request()->file('img_user') , 'users') ;
             $user['image']  = $imageurl ;
 
         }

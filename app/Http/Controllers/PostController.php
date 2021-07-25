@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostController extends ImageUploder
 {
     /**
      * Display a listing of the resource.
@@ -34,9 +35,26 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        //
+
+        $data   =   $request->except('categores')     ;
+        $imageurl =  $this->uploadImage(request()->file('image-post')  , 'posts')  ;
+        $data['image-post'] =   $imageurl   ;
+
+
+
+        $post =  auth()->user()->posts()->create($data);
+
+
+
+        //   after create categores:
+        //   $post->categore()->attach(request('categores'))    ;
+
+
+        return redirect(route('posts.index')) ;
+
+
     }
 
     /**
