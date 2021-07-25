@@ -23,15 +23,20 @@
             </tr>
             </thead>
             <tbody>
+
+
+            @foreach($posts    as      $post)
             <tr>
-                <td>1</td>
-                <td>sadeq</td>
-                <td>sadeqmoradi1997@gmail.com</td>
-                <td>مدیرکل</td>
-                <td>2 روز قبل</td>
+                <td>{{$post->id}}</td>
+                <td>{{$post->title}}</td>
+                <td><img src="/storage/posts/{{$post->image_post}}" width="100px"></td>
+                <td>{{$post->description}}</td>
+                <td>{{\Hekmatinasser\Verta\Verta::instance($post->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
                 <td><button class="btn btn-warning">بروزرسانی</button></td>
                 <td><button class="btn btn-danger">حذف مقاله</button></td>
             </tr>
+
+            @endforeach
 
 
             </tbody>

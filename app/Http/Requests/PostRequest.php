@@ -27,7 +27,7 @@ class PostRequest extends FormRequest
         return [
 
             'title' => 'required'    ,
-            'image-post' => 'required'  ,
+            'image_post' => 'required'  ,
             'description' => 'required'  ,
             'categores' => 'required'   ,
 
@@ -39,7 +39,7 @@ class PostRequest extends FormRequest
         return[
 
             'title.required' => 'عنوان مقاله را وارد کنید .  '    ,
-            'image-post.required' => 'عکس مقاله را وارد کنید . '  ,
+            'image_post.required' => 'عکس مقاله را وارد کنید . '  ,
             'description.required' => 'توضیحات مقاله را وارد کنید .' ,
             'categores.required' => 'دسته بندی مقاله را تعیین کنید .'
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends ImageUploder
@@ -15,7 +16,8 @@ class PostController extends ImageUploder
     public function index()
     {
 
-        return  view('post.index') ;
+        $posts  =   Post::all() ;
+        return  view('post.index' , ['posts'    =>  $posts]) ;
     }
 
     /**
@@ -39,8 +41,8 @@ class PostController extends ImageUploder
     {
 
         $data   =   $request->except('categores')     ;
-        $imageurl =  $this->uploadImage(request()->file('image-post')  , 'posts')  ;
-        $data['image-post'] =   $imageurl   ;
+        $imageurl =  $this->uploadImage(request()->file('image_post')  , 'posts')  ;
+        $data['image_post'] =   $imageurl   ;
 
 
 

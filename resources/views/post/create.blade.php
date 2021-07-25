@@ -30,7 +30,7 @@
 
         <div class="form-group">
             <label for="Upload">انتخاب عکس به عنوان عکس اصلی مقاله:</label>
-            <input type="file" id="Upload" class="form-control" value="upload image" name="image-post"/>
+            <input type="file" id="Upload" class="form-control" value="upload image" name="image_post"/>
             @if($errors->has('image-post'))
                 <p style="color: red">{{ $errors->first('image-post') }}</p>
             @endif
