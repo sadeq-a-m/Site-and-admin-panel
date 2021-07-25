@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-
-
     <link rel="stylesheet" href="{{asset('/style/index.css')}}">
     <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
     <title>index</title>
@@ -86,6 +82,7 @@
 
                     @include('components.sidbar.users')
                     @include('components.sidbar.roles')
+                    @include('components.sidbar.posts')
                     <li><a href="#" class="arrowEl"><span class="fa fa-edit"></span><span class="text"> فرم ها <span class="arrow">></span></span></a>
                         <div class="submenu1">
                             <a href="login.html"><span class="fas fa-circle"> ورود</span></a>
