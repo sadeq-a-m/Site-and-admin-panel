@@ -28,6 +28,18 @@ class EventServiceProvider extends ServiceProvider
             StoreUserLoginHistory::class,
         ]
 
+         ,
+
+         CounterViewsUser::class => [
+            StoreCountViewsUsers::class,
+
+        ]   ,
+
+        CounterViewsPost::class => [
+
+            StoreCountViewsPosts::class,
+        ]
+
 
 
     ];

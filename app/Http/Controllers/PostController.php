@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Count;
 use App\Http\Requests\PostRequest;
 use App\Post;
+use App\Providers\CounterViews;
+use App\Providers\CounterViewsPost;
+use App\Providers\StoreCountViewsPosts;
 use Illuminate\Http\Request;
 
 class PostController extends ImageUploder
@@ -15,6 +19,11 @@ class PostController extends ImageUploder
      */
     public function index()
     {
+
+
+        $counter    =  Count::find(1)   ;
+        event(new CounterViewsPost($counter))   ;
+
 
         $posts  =   Post::all() ;
         return  view('post.index' , ['posts'    =>  $posts]) ;
