@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Count;
 use App\Http\Requests\UserRequesst;
+use App\Providers\CounterViews;
+use App\Providers\CounterViewsUser;
+use App\Providers\StoreCountViewsUsers;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
@@ -18,6 +22,7 @@ class UserController extends ImageUploder
     public function index()
     {
 
+
         return view('components.panel')     ;
 
     }
@@ -25,6 +30,8 @@ class UserController extends ImageUploder
 
     public function main()
     {
+        $user   =   Count::find(1)  ;
+        event(new  CounterViewsUser($user)) ;
         return view('users.index' , ['users' => User::all()])     ;
     }
 

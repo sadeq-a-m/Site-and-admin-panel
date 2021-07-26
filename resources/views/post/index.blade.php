@@ -27,12 +27,28 @@
 
             @foreach($posts    as      $post)
             <tr>
+
+
+
+
                 <td>{{$post->id}}</td>
                 <td>{{$post->title}}</td>
                 <td><img src="/storage/posts/{{$post->image_post}}" width="100px"></td>
                 <td>{{$post->description}}</td>
                 <td>{{\Hekmatinasser\Verta\Verta::instance($post->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
-                <td><button class="btn btn-warning">بروزرسانی</button></td>
+
+
+
+
+                <td>
+
+                    <form method="get" action={{route('posts.edit' ,   $post->id)}} >
+                        @csrf
+
+
+                        <button class="btn btn-warning">بروز رسانی</button>
+                    </form>
+                </td>
 
 
 

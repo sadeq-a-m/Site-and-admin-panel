@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Count;
 use App\Http\Requests\PostRequest;
 use App\Post;
+use App\Providers\CounterViews;
+use App\Providers\CounterViewsPost;
+use App\Providers\StoreCountViewsPosts;
 use Illuminate\Http\Request;
 
 class PostController extends ImageUploder
@@ -15,6 +19,11 @@ class PostController extends ImageUploder
      */
     public function index()
     {
+
+
+        $counter    =  Count::find(1)   ;
+        event(new CounterViewsPost($counter))   ;
+
 
         $posts  =   Post::all() ;
         return  view('post.index' , ['posts'    =>  $posts]) ;
@@ -78,7 +87,9 @@ class PostController extends ImageUploder
      */
     public function edit($id)
     {
-        //
+
+        $post   =   Post::find($id)      ;
+        return view('post.edit' , ['post' => $post])    ;
     }
 
     /**
@@ -88,9 +99,33 @@ class PostController extends ImageUploder
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-        //
+
+       $post    =   Post::find($id) ;
+       $data    =   $request->except('categores')   ;
+
+
+       if ($request->hasFile('image_post')){
+
+            $imageurl =  $this->uploadImage(request()->file('image_post') , 'posts') ;
+            $data['image_post']  =   $imageurl   ;
+
+       }
+       else{
+           $data['image_post']  =   $post->image_post ;
+       }
+
+
+
+       $post->update($data)    ;
+
+//       $post->categore()->detach($post->categore)  ;
+//       $post->categore()->attach(request('categores'))    ;
+       return redirect(route('posts.index'))    ;
+
+
+
     }
 
     /**
