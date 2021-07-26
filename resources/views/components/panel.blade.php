@@ -80,9 +80,25 @@
                     <li><a href="#"><span class="fa fa-th"></span><span class="text"> ویجت ها</span></a></li>
                     <li><a href="#"><span class="fa fa-chart-bar"></span><span class="text"> نمودارها</span></a></li>
 
+
+
+
                     @include('components.sidbar.users')
                     @include('components.sidbar.roles')
                     @include('components.sidbar.posts')
+                    @include('components.sidbar.categores')
+
+
+
+
+
+
+
+
+
+
+
+
                     <li><a href="#" class="arrowEl"><span class="fa fa-edit"></span><span class="text"> فرم ها <span class="arrow">></span></span></a>
                         <div class="submenu1">
                             <a href="login.html"><span class="fas fa-circle"> ورود</span></a>
