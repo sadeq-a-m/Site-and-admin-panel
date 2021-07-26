@@ -33,7 +33,19 @@
                 <td>{{$post->description}}</td>
                 <td>{{\Hekmatinasser\Verta\Verta::instance($post->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
                 <td><button class="btn btn-warning">بروزرسانی</button></td>
-                <td><button class="btn btn-danger">حذف مقاله</button></td>
+
+
+
+                <td>
+                    <form method="post" action={{route('posts.destroy'  ,   $post->id)}} >
+                        @csrf
+                        @method('DELETE')
+
+
+                        <button class="btn btn-danger">حذف مقاله</button>
+                    </form>
+                </td>
+
             </tr>
 
             @endforeach
