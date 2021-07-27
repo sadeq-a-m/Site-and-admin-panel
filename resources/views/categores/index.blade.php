@@ -16,7 +16,32 @@
 		</thead>
 		<tbody>
 			<tr>
-				
+
+				<td>شناسه</td>
+				<td>عنوان موجود</td>
+
+				<td>
+
+					<form method="get" action="#" >
+						@csrf
+
+
+						<button class="btn btn-warning">بروز رسانی</button>
+					</form>
+				</td>
+
+
+
+				<td>
+					<form method="post" action="#" >
+						@csrf
+						@method('DELETE')
+
+
+						<button class="btn btn-danger">حذف مقاله</button>
+					</form>
+				</td>
+
 			</tr>
 	</table>
 </div>
