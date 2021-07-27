@@ -13,7 +13,8 @@ class CategoreController extends Controller
     {
 
 
-        return  view('categores.index') ;
+        $all_categore   =   Categore::all()         ;
+        return  view('categores.index'  ,   ['categores'        =>      $all_categore])        ;
     }
 
 
@@ -35,8 +36,8 @@ class CategoreController extends Controller
     public function store(CategoreRequest $request)
     {
 
-       $data    =   $request->all() ;
-       Categore::create($data)  ;
+       $data    =   $request->all()     ;
+       Categore::create($data)       ;
        return redirect(route('all_categore'))   ;
 
     }

@@ -15,10 +15,13 @@
 			</tr>
 		</thead>
 		<tbody>
+
+
+		@foreach($categores as $categore)
 			<tr>
 
-				<td>شناسه</td>
-				<td>عنوان موجود</td>
+				<td>{{$categore->id}}</td>
+				<td>{{$categore->title}}</td>
 
 				<td>
 
@@ -43,6 +46,10 @@
 				</td>
 
 			</tr>
+
+		@endforeach
+
+
 	</table>
 </div>
 
