@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Categore;
 use App\Count;
 use App\Http\Requests\PostRequest;
 use App\Post;
@@ -37,7 +38,8 @@ class PostController extends ImageUploder
     public function create()
     {
 
-        return view('post.create')  ;
+        $categores  =   Categore::all()     ;
+        return view('post.create'   ,   ['categores'    =>  $categores])  ;
     }
 
     /**
@@ -60,7 +62,7 @@ class PostController extends ImageUploder
 
 
         //   after create categores:
-        //   $post->categore()->attach(request('categores'))    ;
+           $post->categore()->attach(request('categores'))    ;
 
 
         return redirect(route('posts.index')) ;
