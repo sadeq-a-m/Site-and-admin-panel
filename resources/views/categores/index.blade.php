@@ -36,7 +36,7 @@
 
 
 				<td>
-					<form method="post" action="#" >
+					<form method="post" action="{{route('destroy.categore' , $categore->id)}}" >
 						@csrf
 						@method('DELETE')
 

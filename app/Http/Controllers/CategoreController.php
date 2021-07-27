@@ -41,4 +41,16 @@ class CategoreController extends Controller
        return redirect(route('all_categore'))   ;
 
     }
+
+
+
+
+
+
+    public function destroy(Categore $categore)
+    {
+
+        $categore->delete() ;
+        return  back()  ;
+    }
 }
