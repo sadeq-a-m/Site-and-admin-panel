@@ -90,8 +90,9 @@ class PostController extends ImageUploder
     public function edit($id)
     {
 
-        $post   =   Post::find($id)      ;
-        return view('post.edit' , ['post' => $post])    ;
+        $post   =   Post::find($id)        ;
+        $categores  =   Categore::all()    ;
+        return view('post.edit' , ['post' => $post , 'categores'    =>  $categores])    ;
     }
 
     /**
@@ -122,8 +123,8 @@ class PostController extends ImageUploder
 
        $post->update($data)    ;
 
-//       $post->categore()->detach($post->categore)  ;
-//       $post->categore()->attach(request('categores'))    ;
+       $post->categore()->detach($post->categore)  ;
+       $post->categore()->attach(request('categores'))    ;
        return redirect(route('posts.index'))    ;
 
 
