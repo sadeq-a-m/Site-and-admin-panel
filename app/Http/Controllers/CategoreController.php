@@ -47,6 +47,30 @@ class CategoreController extends Controller
 
 
 
+    public function edit(Categore $categore)
+    {
+
+        return  view('categores.edit' , ['categore' => $categore])  ;
+    }
+
+
+
+
+    public function update(CategoreRequest $request ,  Categore $categore)
+    {
+
+       $data    =   $request->all() ;
+
+       $categore->update($data) ;
+       return redirect(route('all_categore'));
+    }
+
+
+
+
+
+
+
     public function destroy(Categore $categore)
     {
 

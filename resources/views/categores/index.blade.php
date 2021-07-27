@@ -10,8 +10,9 @@
 			<tr>
 				<th>شناسه</th>
 				<th>عنوان موجود</th>
-				<th>حذف</th>
 				<th>ویرایش</th>
+				<th>حذف</th>
+
 			</tr>
 		</thead>
 		<tbody>
@@ -23,10 +24,10 @@
 				<td>{{$categore->id}}</td>
 				<td>{{$categore->title}}</td>
 
-				<td>
 
-					<form method="get" action="#" >
-						@csrf
+
+				<td>
+					<form method="get" action="{{route('edit.categore'  ,  $categore->id)}}" >
 
 
 						<button class="btn btn-warning">بروز رسانی</button>
@@ -39,7 +40,6 @@
 					<form method="post" action="{{route('destroy.categore' , $categore->id)}}" >
 						@csrf
 						@method('DELETE')
-
 
 						<button class="btn btn-danger">حذف مقاله</button>
 					</form>
