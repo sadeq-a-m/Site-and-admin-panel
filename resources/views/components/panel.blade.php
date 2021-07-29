@@ -73,6 +73,7 @@
                     <span class="fas fa-search"></span>
                 </div>
             </div>
+            <hr/>
             <nav>
                 <ul class="menu">
                     <li class="title"><a href="index.html"><span class="fa fa-tachometer"></span><span class="text"> داشبورد <small class="label">جدید</small></span></a></li>

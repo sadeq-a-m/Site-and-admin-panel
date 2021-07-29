@@ -1,0 +1,300 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	
+}
+.home-page{
+	
+}
+.wrapper{
+	background:#5000ca;
+}
+header a{
+	text-decoration:none;
+	color:#d6d6d6;
+}
+header a:hover{
+	color:#fff;
+}
+
+/* Menu styles on large devices */
+.section-right{
+	padding-bottom:10px;
+}
+.section-right h2{
+	float:right;
+	padding:0 3vw;
+}
+.section-right ul li{
+	float:right;
+	list-style:none;
+	padding:10px;
+}
+.section-left{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.section-left div{
+	margin:2px;
+}
+.section-left .login{
+	border:2px solid #fff;
+	padding:3px 10px;
+	border-radius:5px;
+}
+.search , .shop{
+	padding:7px;
+}
+.search{
+	background:#37287b;
+	border-radius:50%;
+}
+.shop{
+	border-radius:3px;
+}
+.shop:hover{
+	background-color:#fff;
+}
+.shop:hover a{
+	color:#999;
+}
+.search i , .shop i{
+	font-size:20px;
+}
+
+/* Menu styles on small devices */
+.minimaize{
+	display:none;
+}
+.icon-holder{
+	display:flex;
+	float:left;
+}
+.minimaize h2{
+	float:right;
+	padding:15px 4vw;
+}
+.icon-holder{
+	padding:15px 3vw;
+}
+.icons div{
+	float:right;
+	padding:8px;
+}
+.icons div i{
+	font-size:20px:
+}
+.hamburger{
+	float:right;
+}
+.hamburger .lines{
+	width:30px;
+	height:4px;
+	margin:7px;
+	border-radius:2px;
+	background:#fff;
+}
+.hidden-lg img{
+	font-size:100px;
+}
+
+/* Site landing section styles */
+.middle{
+	position:relative;
+}
+.middle .svg-patern{
+	width:100%;
+	z-index:-1;
+	position:absolute;
+}
+.landing{
+	position:relative;
+	height:200px;
+}
+.landing-text{
+	position:absolute;
+	right:50%;
+	top:20%;
+	width:50%;
+}
+.landing-text h1{
+	color:#fff;
+	font-weight:600;
+	text-align:center;
+}
+.landing-text .landing-btn{
+	display:flex;
+	justify-content:center;
+}
+.landing-btn button{
+	border-radius:20px;
+}
+.landing-img{
+	position:absolute;
+	right:13%;
+	top:20%;
+}
+.landing-img img{
+	max-width:23%;
+}
+
+
+
+/* styles of the main part of the site */
+
+
+/* Site service section styles */
+.services{
+	margin-top:220px;
+}
+.svg,.txt-box{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/* Site courses section styles */
+.courses-box{
+	margin-top:100px;
+}
+.Separator{
+	background:#5000ca;
+	height:5px;
+	opacity:1;
+	border-radius:4px;
+	width:15%;
+	margin-right:1px;
+}
+.courses-holder{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:20px 5px;
+}
+.courses-holder a{
+	color:#222;
+	text-decoration:none;
+}
+.courses-banner img{
+	width:100%;
+	border-radius:20px 20px 0 0;
+}
+.hr-after-banner{
+	display:flex;
+	justify-content:center;
+}
+.hr-after-banner hr{
+	width:20%;
+	height:5px;
+	border-radius:5px;
+	font-weight:600;
+	color:#5000ca;
+	opacity:1;
+}
+.course-teacher,.course-details time{
+	opacity:.7;
+	padding-top:10px;
+}
+.course-details{
+	margin-top:60px;
+}
+.course-details .btn{
+	float:left;
+	margin-left:10px;
+	padding:2px 15px;
+	color:#fff;
+	border-radius:15px;
+}
+
+/* site earn-money section styles */
+.earn-money{
+	margin:50px 0;
+}
+.earn-money div{
+	display:flex;
+	justify-content:center;
+	padding-top:20px;
+}
+.earn-money img{
+	max-width:100%;
+	border-radius:50px;
+}
+
+/* styles section of how the site works */
+.site-works{
+	margin-top:50px;
+	display:flex;
+	justify-content:center;
+	padding-top:20px;
+}
+.site-works h2,.site-works h4{
+	font-weight:600;
+}
+.site-works img{
+	max-width:100%;
+}
+
+
+
+
+
+
+@media (max-width:768px){
+	.services{
+	    margin-top:130px;
+    }
+	.courses-box{
+		margin-top:70px;
+	}
+}
+
+@media (max-width:992px){
+	header a{
+		color:#fff;
+	}
+	.maximaize{
+		display:none;
+	}
+	.minimaize{
+		display:block;
+	}
+	.services{
+	    margin-top:130px;
+    }
+	.Separator{
+		width:20%;
+	}
+}
+
+@media (max-width:1200px){
+	.hidden-lg{
+	    display:none;
+    }
+	.svg-patern img{
+		display:none;
+	}
+	.svg-patern{
+		background:#5000ca;
+		height:300px;
+		border-radius:0 0 35% 40%;
+	}
+	.landing-text{
+		right:0%;
+        top:20%;
+	    width:100%;
+	}
+	.landing-img{
+		display:none;
+	}
+	.services{
+	    margin-top:130px;
+    }
+	.hidden-md{
+	    display:none;
+    }
+}
+
