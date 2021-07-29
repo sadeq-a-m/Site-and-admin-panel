@@ -60,12 +60,11 @@
                 <select class="form-group" multiple name="categores[]">
 
 
-                    <option value="Scientific">علمی</option>
-                    <option value="News">خبری</option>
-                    <option value="Economic">اقتصادی</option>
-                    <option value="Sports">ورزشی</option>
-                    <option value="IT">فناوری اطلاعات</option>
-                    <option value="artistic">هنری</option>
+                    @foreach($categores    as      $categore)
+
+                    <option value="{{$categore->id}}">{{$categore->title}}</option>
+
+                    @endforeach
 
 
                 </select>

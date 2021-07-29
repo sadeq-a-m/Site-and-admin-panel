@@ -56,13 +56,12 @@
         <div class="form-group">
             <select class="form-group" multiple name="categores[]">
 
+                @foreach($categores    as      $categore)
 
-                <option value="Scientific">علمی</option>
-                <option value="News">خبری</option>
-                <option value="Economic">اقتصادی</option>
-                <option value="Sports">ورزشی</option>
-                <option value="IT">فناوری اطلاعات</option>
-                <option value="artistic">هنری</option>
+                <option value="{{$categore->id}}">{{$categore->title}}</option>
+
+                @endforeach
+
 
 
             </select>
