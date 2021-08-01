@@ -210,20 +210,6 @@ header a:hover{
 	border-radius:15px;
 }
 
-/* site earn-money section styles */
-.earn-money{
-	margin:50px 0;
-}
-.earn-money div{
-	display:flex;
-	justify-content:center;
-	padding-top:20px;
-}
-.earn-money img{
-	max-width:100%;
-	border-radius:50px;
-}
-
 /* styles section of how the site works */
 .site-works{
 	margin-top:50px;
@@ -237,10 +223,67 @@ header a:hover{
 .site-works img{
 	max-width:100%;
 }
+.site-works .txt-box{
+	color:#222;
+}
 
+/* Site section footer styles */
+.footer{
+	background:#39374a;
+	margin-top:70px;
+}
+.about,.footer-membership,.instruction-site{
+	padding:20px;
+}
+.footer hr{
+	color:#fff;
+	height:1px;
+	opacity:1;
+}
+.footer .container{
+	display:flex;
+	justify-content:center;
+}
+.txt-about,.txt-box{
+	color:#fff;
+}
+.trust-logo ul{
+	list-style:none;
+}
+.trust-logo ul li{
+	float:right;
+	padding:10px;
+}
+.footer-membership div:nth-child(1) p{
+	overflow-wrap:keep-all;
+}
+.footer-membership .txt-box i{
+	font-size:30px;
+	float:right;
+	padding:20px;
+	color:yellow;
+}
+.instruction-site ul{
+	list-style:none;
+	color:#fff;
+}
+.instruction-site ul a{
+	color:#fff;
+	text-decoration:none;
+	opacity:.7;
+}
+.instruction-site ul a:hover{
+	color:#fff;
 
-
-
+}
+.copyright{
+	background:#fff;
+	height:50px;
+}
+.builders{
+	font-weight:800;
+	color:#26214b;
+}
 
 
 @media (max-width:768px){
