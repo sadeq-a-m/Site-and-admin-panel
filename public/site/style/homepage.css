@@ -3,11 +3,15 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+@fone-face{
+	font-family:'vazir';
+	src:url(font/Vazir-Bold.ttf);
+}
 body{
-	
+	font-family:vazir;
 }
 .home-page{
-	
+	overflow:hidden;
 }
 .wrapper{
 	background:#5000ca;
@@ -46,15 +50,14 @@ header a:hover{
 	padding:3px 10px;
 	border-radius:5px;
 }
-.search , .shop{
-	padding:7px;
-}
 .search{
 	background:#37287b;
 	border-radius:50%;
+	padding:7px;
 }
 .shop{
 	border-radius:3px;
+	padding:7px 7px 2px 5px;
 }
 .shop:hover{
 	background-color:#fff;
@@ -105,6 +108,7 @@ header a:hover{
 /* Site landing section styles */
 .middle{
 	position:relative;
+	width:100%;
 }
 .middle .svg-patern{
 	width:100%;
@@ -155,6 +159,9 @@ header a:hover{
 	display:flex;
 	justify-content:center;
 	align-items:center;
+}
+.txt-box p{
+	color:#111;
 }
 
 /* Site courses section styles */
@@ -267,22 +274,20 @@ header a:hover{
 	list-style:none;
 	color:#fff;
 }
+.instruction-site ul h4{
+	font-weight:600;
+}
 .instruction-site ul a{
 	color:#fff;
 	text-decoration:none;
 	opacity:.7;
 }
 .instruction-site ul a:hover{
-	color:#fff;
-
+	opacity:1;
 }
 .copyright{
 	background:#fff;
-	height:50px;
-}
-.builders{
-	font-weight:800;
-	color:#26214b;
+	height:auto;
 }
 
 
