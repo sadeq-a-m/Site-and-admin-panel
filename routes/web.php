@@ -20,7 +20,10 @@ use Illuminate\Support\Facades\Route    ;
 Auth::routes();
 
 
+Route::get('/' , function (){
 
+    return " kdfjkfd"   ;
+})  ;
 
 
 Route::middleware(['auth'])->prefix('admin')->group(function (){
