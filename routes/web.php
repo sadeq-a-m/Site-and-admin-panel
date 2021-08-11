@@ -21,11 +21,15 @@ use Illuminate\Support\Facades\Redis;
 Auth::routes();
 
 
+Route::get('/', function(){
+
+    return  view('home.main')   ;
+})  ;   
 
 
 Route::get('/cache' ,   'CacheController@index') ;
 
-Route::get('/' , 'RedisController@index')  ;
+
 
 
 Route::middleware(['auth'])->prefix('admin')->group(function (){
