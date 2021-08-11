@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="veiwport" content="width:device-width, initial-scale:1.0;">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/homepage.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.rtl.css">
+	<link rel="stylesheet" href="../style/homepage.css">
     <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
 	<title>home</title>
 </head>
@@ -39,14 +39,28 @@
 		</div>
 	  </div>
 	  
+	  <div class="search-modal">
+	    <form action="#">
+		  <div class="input-group">
+		    <div class="input-group-append">
+			  <button class="btn btn-primary p-3 fas fa-search input-group-text"></button>
+			</div>
+			<input type="text" class="form-control" placeholder="عبارت مورد نظر را جستجو کنید"/>
+			<div class="input-group-prepend">
+			  <button class="btn btn-primary p-3 fas fa-times input-group-text close-search"></button>
+			</div>
+		  </div>
+		</form>
+	  </div>
+	  
 	  <!-- Menu codes on small devices -->
 	  <div class="minimaize">
 	    <a href="#"><h2>پروگیران</h2></a>
 		<div class="icon-holder">
 		  <div class="icons">
-		    <div class=""><a href="#"><i class="fas fa-search"></i></a></div>
-		    <div class=""><a href="#"><i class="fas fa-user"></i></a></div>
-		    <div class=""><a href="#"><i class="fas fa-shopping-cart"></i></a></div>
+		    <div class="search-min"><a href="#"><i class="fas fa-search"></i></a></div>
+		    <div class="shop-min"><a href="#"><i class="fas fa-user"></i></a></div>
+		    <div class="login-min"><a href="#"><i class="fas fa-shopping-cart"></i></a></div>
 		  </div>
 	      <div class="hamburger">
 		    <div class="lines line1"></div>
@@ -55,17 +69,34 @@
 		  </div>
 		</div>
 	  </div>
+	  
+	  <div class="menu-modal-min">
+	    <div>
+		  <a href="#"><i class="fas fa-times close-menu"></i></a>
+	      <nav>
+		    <ul>
+			  <li><a href="#">صفحه اصلی</a></li>
+			  <li><a href="#">دوره های آموزشی</a></li>
+			  <li><a href="#">مقالات</a></li>
+			  <li><a href="#">همکاری</a></li>
+			  <li><a href="#">درباره ما</a></li>
+			  <li><a href="#">تماس با ما</a></li>
+		    </ul>
+		  </nav>
+	    </div>
+	  </div>
+	  
 	</header>
   </div>
   
   <!-- Site landing section codes -->
   <div class="middle">
       <div class="svg-patern">
-	    <img src="image/wave.svg" alt="svg-header" />
+	    <img src="../image/wave.svg" alt="svg-header" />
 	  </div>
 	  <div class="row landing">
 	    <div class="row landing-img">
-		  <img src="image/home-background.svg" alt="men-programer"/>
+		  <img src="../image/home-background.svg" alt="men-programer"/>
 		</div>
 	    <div class="row landing-text">
 		  <h1>پروگیران <br/>مرجع آموزش برنامه نویسی</h1>
@@ -84,7 +115,7 @@
     <!-- Site service section codes -->
     <div class="row services">
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-	    <div class="svg">
+	    <div class="service-icon">
 		  <img src="https://img.icons8.com/nolan/128/money-circulation.png" alt="icon-money"/>
 		</div>
 		<div class="txt-box">
@@ -92,7 +123,7 @@
 		</div>
 	  </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-	    <div class="svg">
+	    <div class="service-icon">
 		  <img src="https://img.icons8.com/nolan/128/google-classroom.png" alt="icon-teachers"/>
 		</div>
 		<div class="txt-box">
@@ -100,7 +131,7 @@
 		</div>
 	  </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-	    <div class="svg">
+	    <div class="service-icon">
 		  <img src="https://img.icons8.com/nolan/128/technical-support.png" alt="icon-support"/>
 		</div>
 		<div class="txt-box">
@@ -108,7 +139,7 @@
 		</div>
 	  </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-	    <div class="svg">
+	    <div class="service-icon">
 		  <img src="https://img.icons8.com/nolan/128/communication.png" alt="icon-ask $ question"/>
 		</div>
 		<div class="txt-box">
@@ -126,7 +157,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course3.jpg" alt="img-course"/>
+		        <img src="../image/course3.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -151,7 +182,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course4.jpg" alt="img-course"/>
+		        <img src="../image/course4.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -176,7 +207,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course3.jpg" alt="img-course"/>
+		        <img src="../image/course3.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -203,7 +234,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course3.jpg" alt="img-course"/>
+		        <img src="../image/course3.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -228,7 +259,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course4.jpg" alt="img-course"/>
+		        <img src="../image/course4.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -253,7 +284,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course3.jpg" alt="img-course"/>
+		        <img src="../image/course3.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -280,7 +311,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course3.jpg" alt="img-course"/>
+		        <img src="../image/course3.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -305,7 +336,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course4.jpg" alt="img-course"/>
+		        <img src="../image/course4.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -330,7 +361,7 @@
 	      <div class="row courses-holder">
 		    <a href="#">
 			  <div class="courses-banner">
-		        <img src="image/course3.jpg" alt="img-course"/>
+		        <img src="../image/course3.jpg" alt="img-course"/>
 		      </div>
 		      <div class="hr-after-banner">
 		        <hr/>
@@ -357,7 +388,7 @@
 	<!-- Codes section of how the site works -->
 	<div class="row container site-works">
 	    <div class="col-lg-4 hidden-md">
-	      <img src="image/4.jpg" alt="men-programer"/>
+	      <img src="../image/4.jpg" alt="men-programer"/>
 	    </div>
 	    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 container txt-box">
 		  <div class="row">
@@ -388,8 +419,8 @@
 	</div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 trust-logo">
 	  <ul>
-	    <li><a href="#"><img src="image/parsian-logo.jpg" alt="logo-parsian"/></a></li>
-	    <li><a href="#"><img src="image/nashr-logo.jpg" alt="logo-nashr"/></a></li>
+	    <li><a href="#"><img src="../image/parsian-logo.jpg" alt="logo-parsian"/></a></li>
+	    <li><a href="#"><img src="../image/nashr-logo.jpg" alt="logo-nashr"/></a></li>
 	  </ul>
 	</div>
   </div>
@@ -465,5 +496,7 @@
 
 </div>
 
+
+<script src="../script/homepage.js"></script>
 </body>
 </html>

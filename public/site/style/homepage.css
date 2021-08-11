@@ -9,6 +9,7 @@
 }
 body{
 	font-family:vazir;
+	font-size:16px;
 }
 .home-page{
 	overflow:hidden;
@@ -50,38 +51,54 @@ header a:hover{
 	padding:3px 10px;
 	border-radius:5px;
 }
-.search{
-	background:#37287b;
+.section-left .search{
 	border-radius:50%;
-	padding:7px;
+	padding:7px 7px 2px 5px;
 }
-.shop{
+.section-left .shop{
 	border-radius:3px;
 	padding:7px 7px 2px 5px;
 }
-.shop:hover{
+.shop:hover , .search:hover{
 	background-color:#fff;
 }
-.shop:hover a{
+.shop:hover a , .search:hover a{
 	color:#999;
 }
 .search i , .shop i{
 	font-size:20px;
+}
+.search-modal{
+	position:fixed;
+	z-index:999999;
+	display:flex;
+	justify-content:center;
+	background:rgba(0,0,0,0.6);
+	width:100%;
+	height:100%;
+	top:0;
+	transform:translateX(-100%);
+	transition:300ms;
+}
+.search-modal form{
+	width:60%;
+	height:100px;
+	position:relative;
+	margin-top:100px;
+	padding:20px;
 }
 
 /* Menu styles on small devices */
 .minimaize{
 	display:none;
 }
-.icon-holder{
-	display:flex;
-	float:left;
-}
 .minimaize h2{
 	float:right;
 	padding:15px 4vw;
 }
 .icon-holder{
+	display:flex;
+	float:left;
 	padding:15px 3vw;
 }
 .icons div{
@@ -93,6 +110,7 @@ header a:hover{
 }
 .hamburger{
 	float:right;
+	cursor:pointer;
 }
 .hamburger .lines{
 	width:30px;
@@ -100,9 +118,35 @@ header a:hover{
 	margin:7px;
 	border-radius:2px;
 	background:#fff;
+	background:#ddd;
 }
-.hidden-lg img{
-	font-size:100px;
+.menu-modal-min{
+	width:100%;
+	height:100%;
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transform:translateX(-100%);
+	top:0;
+	transition:300ms;
+	z-index:999999;
+	background:rgba(0,0,0,0.7);
+}
+.menu-modal-min .close-menu{
+	font-size:30px;
+	position:absolute;
+	top:40px;
+	right:50px;
+	color:#fff;
+}
+.menu-modal-min ul{
+	list-style:none;
+}
+.menu-modal-min ul li{
+	padding:10px;
+	font-size:20px;
+	font-weight:600;
 }
 
 /* Site landing section styles */
@@ -147,15 +191,19 @@ header a:hover{
 }
 
 
-
 /* styles of the main part of the site */
-
 
 /* Site service section styles */
 .services{
 	margin-top:220px;
 }
-.svg,.txt-box{
+.box .service-icon img{
+	transition:300ms;
+}
+.box .service-icon img:hover{
+	transform:scale(1.2);
+}
+.service-icon , .txt-box{
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -298,6 +346,9 @@ header a:hover{
 	.courses-box{
 		margin-top:70px;
 	}
+	.search-modal form{
+		width:100%;
+	}
 }
 
 @media (max-width:992px){
@@ -345,4 +396,6 @@ header a:hover{
 	    display:none;
     }
 }
+
+
 
