@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/', function(){
 
-    return  view('home.main')   ;
+    return  view('home.show_all_post')   ;
 })  ;   
 
 
