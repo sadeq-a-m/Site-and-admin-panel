@@ -103,7 +103,7 @@ class UserController extends ImageUploder
 
        $user    =   User::find($id) ;
        $data    =   $request->all() ;
-
+       $role =  $request->only('role')  ;
 
 
         if ($request->hasFile('img_user')){
@@ -119,6 +119,10 @@ class UserController extends ImageUploder
 
 
         $user->update($data);
+        $user->role()->detach($user->role)       ;
+        $user->role()->attach($role)  ;
+
+
         return redirect(route('panel.users'))  ;
 
 
