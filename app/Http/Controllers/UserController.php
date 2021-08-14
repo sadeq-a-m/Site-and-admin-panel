@@ -4,16 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Count;
 use App\Http\Requests\UserRequesst;
+use App\Post;
 use App\Providers\CounterViews;
 use App\Providers\CounterViewsUser;
 use App\Providers\StoreCountViewsUsers;
 use App\Role;
 use App\User;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends ImageUploder
 
 {
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -23,13 +30,24 @@ class UserController extends ImageUploder
     {
 
 
-        return view('components.panel')     ;
+        $user = Auth::user()    ;
+
+        if ($user->can('view' , $user)){
+
+            return view('components.panel')     ;
+        }
+
+        else{
+           return  "شما اجازه ندارید . ";
+        }
+
 
     }
 
 
     public function main()
     {
+
         $user   =   Count::find(1)  ;
         event(new  CounterViewsUser($user)) ;
         return view('users.index' , ['users' => User::all()])     ;
@@ -100,6 +118,8 @@ class UserController extends ImageUploder
     public function update(Request $request, $id)
 
     {
+
+
 
        $user    =   User::find($id) ;
        $data    =   $request->all() ;
