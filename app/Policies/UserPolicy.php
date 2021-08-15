@@ -31,7 +31,7 @@ class UserPolicy
     public function view(User $user, User $model)
     {
        foreach ($user->role as $role){
-           if ($role->name == 'ادمین'){
+           if ($role->name == 'ادمین' || $role->name == 'عضو'){
                return true  ;
            }
        }

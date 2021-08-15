@@ -21,10 +21,7 @@ use Illuminate\Support\Facades\Redis;
 Auth::routes();
 
 
-Route::get('/', function(){
-
-    return  view('home.show_all_post')   ;
-})  ;   
+Route::get('/', 'HomeController@all_post')->name('index') ;
 
 
 Route::get('/cache' ,   'CacheController@index') ;
