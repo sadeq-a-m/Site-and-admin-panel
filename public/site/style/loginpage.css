@@ -1,0 +1,104 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+@font-face{
+   font-family:"vazir";
+   src: url("../font/Vazir.woff");
+}
+body{
+	background-image: linear-gradient(to left,#5000ca,#a572f4);
+	background-attachment:fixed;
+	font-family:vazir,tahoma;
+}
+.container{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	background:rgba(0,0,0,0.5);
+	width:400px;
+	height:auto;
+	display:flex;
+	justify-content:center;
+	border-radius:10px;
+}
+.login-holder{
+	width:90%;
+	height:auto;
+	position:relative;
+}
+.login-holder h2{
+	color:#fff;
+	text-align:center;
+	margin-top:20px;
+}
+.user-email , .user-password , .user-name{
+	margin-top:20px;
+	width:100%;
+	margin-top:20px;
+	width:100%;
+}
+.user-email input,
+.user-name input,
+.user-password input{
+	width:94%;
+	padding:10px;
+	border-bottom:1px solid #fff;
+	background:rgba(0,0,0,0.3);
+	border-radius:20px;
+	color:#fff;
+}
+.user-email input:focus,
+.user-name input:focus,
+.user-password input:focus{
+	outline:none;
+}
+.login-holder label{
+	color:#fff;
+	padding-left:10px;
+}
+.checkbox{
+	margin-top:20px;
+	padding-left:3px;
+}
+.checkbox label{
+	font-weight:600;
+}
+.btn{
+	width:100%;
+	margin-top:20px;
+}
+.btn button{
+	width:100%;
+	padding:10px;
+	border-radius:10px;
+	background-color:#111;
+	color:#fff;
+	font-size:16px;
+	font-weight:600;
+	transition:200ms;
+}
+.btn button:hover{
+	background-color:#fff;
+	color:#111;
+	cursor:pointer;
+}
+.login-holder a{
+	text-decoration:none;
+	margin:10px 5px;
+	color:#e4e3e3;
+	display:block;
+	font-weight:600;
+}
+.login-holder a:hover{
+	color:#fff;
+}
+
+@media (max-width:600px){
+	.container{
+		width:80%;
+		margin-top:20%;
+	}
+}

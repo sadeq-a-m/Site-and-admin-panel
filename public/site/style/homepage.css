@@ -3,12 +3,12 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-@fone-face{
-	font-family:'vazir';
-	src:url(font/Vazir-Bold.ttf);
+@font-face{
+   font-family:"vazir";
+   src: url("../font/Vazir.woff");
 }
 body{
-	font-family:vazir;
+	font-family:vazir,tahoma;
 	font-size:16px;
 }
 .home-page{
@@ -25,7 +25,7 @@ header a:hover{
 	color:#fff;
 }
 
-/* Menu styles on large devices */
+/* MENU STYLE ON LARGE DEVICES */
 .section-right{
 	padding-bottom:10px;
 }
@@ -68,27 +68,8 @@ header a:hover{
 .search i , .shop i{
 	font-size:20px;
 }
-.search-modal{
-	position:fixed;
-	z-index:999999;
-	display:flex;
-	justify-content:center;
-	background:rgba(0,0,0,0.6);
-	width:100%;
-	height:100%;
-	top:0;
-	transform:translateX(-100%);
-	transition:300ms;
-}
-.search-modal form{
-	width:60%;
-	height:100px;
-	position:relative;
-	margin-top:100px;
-	padding:20px;
-}
 
-/* Menu styles on small devices */
+/* MENU STYLE ON SMALL DEVICES */
 .minimaize{
 	display:none;
 }
@@ -120,18 +101,37 @@ header a:hover{
 	background:#fff;
 	background:#ddd;
 }
-.menu-modal-min{
-	width:100%;
-	height:100%;
+
+/* MODAL STYLES */
+.search-modal , .menu-modal-min{
 	position:fixed;
+	z-index:999999;
 	display:flex;
 	justify-content:center;
-	align-items:center;
-	transform:translateX(-100%);
+	width:100%;
+	height:100%;
 	top:0;
+	transform:translateX(-100%);
 	transition:300ms;
-	z-index:999999;
+}
+
+/* search-modal styles */
+.search-modal{
+	background:rgba(0,0,0,0.6);
+}
+.search-modal form{
+	width:60%;
+	height:100px;
+	position:relative;
+	margin-top:100px;
+	padding:20px;
+}
+
+
+/* menu-modal styles */
+.menu-modal-min{
 	background:rgba(0,0,0,0.7);
+	align-items:center;
 }
 .menu-modal-min .close-menu{
 	font-size:30px;
@@ -149,7 +149,7 @@ header a:hover{
 	font-weight:600;
 }
 
-/* Site landing section styles */
+/* SITE LANDING SECTION STYLES */
 .middle{
 	position:relative;
 	width:100%;
@@ -191,9 +191,9 @@ header a:hover{
 }
 
 
-/* styles of the main part of the site */
+/* STYLES OF THE MAIN PART OF THE SITE */
 
-/* Site service section styles */
+/* SITE SERVICES SECTION STYLES */
 .services{
 	margin-top:220px;
 }
@@ -212,7 +212,7 @@ header a:hover{
 	color:#111;
 }
 
-/* Site courses section styles */
+/* SITE COURSES SECTION STYLES */
 .courses-box{
 	margin-top:100px;
 }
@@ -265,7 +265,7 @@ header a:hover{
 	border-radius:15px;
 }
 
-/* styles section of how the site works */
+/* STYLES SECTION OF HOW THE SITE WORKS */
 .site-works{
 	margin-top:50px;
 	display:flex;
@@ -282,7 +282,7 @@ header a:hover{
 	color:#222;
 }
 
-/* Site section footer styles */
+/* SITE SECTION FOOTER STYLES */
 .footer{
 	background:#39374a;
 	margin-top:70px;
@@ -348,6 +348,9 @@ header a:hover{
 	}
 	.search-modal form{
 		width:100%;
+	}
+	.login-modal .wrapper{
+		width:80%;
 	}
 }
 

@@ -1,0 +1,45 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+body{
+	display:flex;
+	justify-content:center;
+	background-image: linear-gradient(to left,#5000ca,#a572f4);
+	background-attachment:fixed;
+}
+.error{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.error h2{
+	text-align:center;
+	font-weight:800;
+}
+.error p{
+	font-size:24px;
+	font-weight:800;
+	text-align:center;
+}
+.error .txt{
+	width:100%;
+	margin:0auto;
+}
+.error .error-icons{
+	margin-top:50px;
+	margin-bottom:50px;
+	display:flex;
+	justify-content:center;
+}
+.error .error-icons img{
+	width:40%;
+}
+
+@media (max-width:768px){
+	.error .error-icons img{
+		width:60%;
+	}
+}
