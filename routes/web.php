@@ -13,17 +13,20 @@
 
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route    ;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redis;
 
 
 
 Auth::routes();
 
 
-Route::get('/' , function (){
+Route::get('/', 'HomeController@all_post')->name('index') ;
 
-    return " kdfjkfd"   ;
-})  ;
+
+Route::get('/cache' ,   'CacheController@index') ;
+
+
 
 
 Route::middleware(['auth'])->prefix('admin')->group(function (){

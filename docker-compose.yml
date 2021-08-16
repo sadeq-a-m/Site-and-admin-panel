@@ -33,13 +33,10 @@ services:
 
 
        environment:
-
-           MYSQL_DATABASE: laravel_web
-           MYSQL_USER: laravel_web
-           MYSQL_PASSWORD: replace_mysql_root_password
-           MYSQL_ROOT_PASSWORD: replace_mysql_root_password
-           SERVICE_TAGS: dev
-           SERVICE_NAME: mysql
+         MYSQL_DATABASE: laravel
+         MYSQL_ROOT_PASSWORD: your_mysql_root_password
+         SERVICE_TAGS: dev
+         SERVICE_NAME: mysql
 
        networks:
            - app-network

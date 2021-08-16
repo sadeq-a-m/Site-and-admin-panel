@@ -23,7 +23,7 @@ class PostController extends ImageUploder
 
 
         $counter    =  Count::find(1)   ;
-        event(new CounterViewsPost($counter))   ;
+      //  event(new CounterViewsPost($counter))   ;
 
 
         $posts  =   Post::all() ;
