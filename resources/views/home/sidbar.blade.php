@@ -7,7 +7,7 @@
         <nav>
             <a href="#"><h2>پروگیران</h2></a>
             <ul>
-                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="{{route('index')}}">صفحه اصلی</a></li>
                 <li><a href="#">دوره های آموزشی</a></li>
                 <li><a href="#">مقالات</a></li>
                 <li><a href="#">همکاری</a></li>
