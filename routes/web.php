@@ -20,6 +20,11 @@ use Illuminate\Support\Facades\Redis;
 
 Auth::routes();
 
+Route::get('/403' , function (){
+
+    return  view('errors.403')  ;
+})  ;
+
 
 Route::get('/', 'HomeController@all_post')->name('index') ;
 
