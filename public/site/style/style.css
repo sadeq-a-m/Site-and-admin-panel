@@ -146,7 +146,12 @@ header .user-image{
 	top:50%;
 	left:20px;
 	color:#888;
+	z-index: 2;
+	cursor: pointer;
 	transform:translate(-50%,-50%);
+}
+.search-box span:hover{
+	color:#111;
 }
 .search-box input:focus{
 	background-color:#fff;
@@ -270,6 +275,9 @@ main{
 .page-content form{
 	width:90%;
 }
+.page-content .chart-box{
+	width:97%;
+}
 form div{
 	padding:10px;
 }
@@ -277,7 +285,17 @@ form div{
 	height:250px;
 }
 .role{
-	display:block;
+	display:flex;
+}
+
+.exit-btn{
+	display:flex;
+	justify-content:center;
+	padding:2px;
+	margin-bottom:5px;
+}
+.exit-btn button{
+	width:90%;
 }
 
 
@@ -311,7 +329,6 @@ form div{
 		font-size:20px;
 	}
 }
-
 
 
 

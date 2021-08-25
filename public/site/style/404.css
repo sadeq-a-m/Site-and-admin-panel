@@ -1,0 +1,147 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.error-404{
+	height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+	background-image:linear-gradient(to left,#5000ca,#a572f4);
+	font-family:sans-serif;
+}
+h1{
+	font-size:8em;
+	text-align:center;
+}
+p{
+	margin:20px;
+	text-align:center;
+	font-size:1.5em;
+	font-weight:800;
+}
+.icons404{
+	display:flex;
+	height:200px;
+	justify-content:center;
+	position:relative;
+}
+.icons404 img{
+	width:40%;
+}
+.back-btn{
+	display:grid;
+	place-items:center;
+}
+.back-btn a{
+	text-decoration:none;
+	color:#fff;
+	padding:3px 30px;
+	border:1px solid #fff;
+	border-radius:15px;
+}
+.planet{
+	position:absolute;
+	top:0;
+	left:0;
+	animation: planet 8s linear infinite alternate-reverse;
+}
+.astronaut{
+	animation: astronaut 8s linear infinite alternate-reverse;
+}
+.ufo{
+	position:absolute;
+	bottom:0;
+	right:0;
+	animation: ufo 6s linear infinite alternate-reverse;
+}
+
+
+@media (max-width:768px){
+	h1{
+		font-size:15vw;
+	}
+	p{
+		font-size:5vw;
+	}
+}
+
+
+@keyframes planet{
+	0%{
+		transform:translate(0%,0%);
+	}
+	15%{
+		transform:translate(5%,4%);
+	}
+	30%{
+		transform:translate(0%,3%);
+	}
+	45%{
+		transform:translate(-2%,1%);
+	}
+	60%{
+		transform:translate(-5%,-3%);
+	}
+	75%{
+		transform:translate(0%,-2%);
+	}
+	90%{
+		transform:translate(-2%,1%);
+	}
+	100%{
+		transform:translate(0%,4%);
+	}
+}
+
+@keyframes astronaut{
+	0%{
+		transform:translate(4%,2%);
+	}
+	15%{
+		transform:translate(-1%,4%);
+	}
+	30%{
+		transform:translate(-3%,0%);
+	}
+	45%{
+		transform:translate(-2%,1%);
+	}
+	60%{
+		transform:translate(3%,-3%);
+	}
+	75%{
+		transform:translate(0%,-2%);
+	}
+	90%{
+		transform:translate(2%,1%);
+	}
+	100%{
+		transform:translate(-1%,4%);
+	}
+}
+
+@keyframes ufo{
+	0%{
+		transform:translate(4%,2%);
+	}
+	20%{
+		transform:translate(0%,4%);
+	}
+	40%{
+		transform:translate(-3%,1%);
+	}
+	60%{
+		transform:translate(0%,-4%);
+	}
+	80%{
+		transform:translate(3%,-2%);
+	}
+	100%{
+		transform:translate(0%,1%);
+	}
+}
+
+
+

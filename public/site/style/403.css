@@ -28,18 +28,18 @@ body{
 	width:100%;
 	margin:0auto;
 }
-.error .error-icons{
+.error .icons403{
 	margin-top:50px;
 	margin-bottom:50px;
 	display:flex;
 	justify-content:center;
 }
-.error .error-icons img{
+.error .icons403 img{
 	width:40%;
 }
 
 @media (max-width:768px){
-	.error .error-icons img{
+	.error .icons403 img{
 		width:60%;
 	}
 }

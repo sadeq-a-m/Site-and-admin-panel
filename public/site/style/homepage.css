@@ -287,7 +287,7 @@ header a:hover{
 	background:#39374a;
 	margin-top:70px;
 }
-.about,.footer-membership,.instruction-site{
+.about , .footer-membership , .instruction-site{
 	padding:20px;
 }
 .footer hr{

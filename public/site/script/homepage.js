@@ -39,7 +39,12 @@ iconCloseMenuModal.addEventListener('click',()=>{
 	menuModal.style.transform="translateX(-100%)";
 })
 
+let contactUs=document.querySelector('.call')
 
+contactUs.addEventListener('click',()=>{
+	menuModal.style.transform="translateX(-100%)";
+	console.log('loged')
+})
 
 
 
