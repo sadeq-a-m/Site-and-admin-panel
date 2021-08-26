@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Redis;
 
 
 
+
+Route::get('/search' ,  'SearchController@search')->name('search')  ;
+
+
 Auth::routes();
 
 Route::get('/403' , function (){
