@@ -4,7 +4,7 @@
 	box-sizing:border-box;
 }
 body{
-	
+	overflow-x:hidden; 
 }
 ul{
 	list-style:none;
@@ -43,12 +43,47 @@ header ul li{
 	float:left;
 	padding:10px 15px;
 	height:100%;
+	position: relative;
 }
 header ul li:hover{
 	background-color:#00027b;
 }
 header ul li a:hover{
 	color:#fff;
+}
+header .profile-holder{
+	position: absolute;
+	margin-top: 12px;
+	left: 0;
+	width:140%;
+	height: auto;
+	z-index: 1;
+	color: #fff;
+	outline:1px solid #fff;
+	transform: rotateX(90deg);
+	transition: 500ms;
+	visibility: hidden;
+}
+header .show-profile{
+	transform: rotateX(0deg);
+	transition: 500ms;
+	visibility: visible;
+}
+.profile-holder .details-holder{
+	background: #3c8dbc;
+}
+.profile-holder .details{
+	display: grid;
+	place-items:center;
+	padding-top: 10px;
+}
+.profile-holder .details img{
+	width:50px;
+	height:50px;
+	border-radius: 50%; 
+}
+.profile-holder .btns-holder{
+	background: #fff;
 }
 header .label{
 	padding:1px;

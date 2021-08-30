@@ -47,10 +47,17 @@ contactUs.addEventListener('click',()=>{
 })
 
 
+let showCommentBox=document.getElementById('show-comment-box')
+let createNewComment=document.querySelector('.create-new-comment')
 
+showCommentBox.addEventListener('click',()=>{
+	createNewComment.classList.toggle('show-create-comment')
+})
 
+let showReplyBox=document.querySelectorAll('.reply-comment')
 
-
-
-
-
+showReplyBox.forEach((item)=>{
+	item.addEventListener('click',()=>{
+		item.nextElementSibling.classList.toggle('show-reply-box')
+	})
+})

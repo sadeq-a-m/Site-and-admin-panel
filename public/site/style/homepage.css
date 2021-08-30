@@ -10,6 +10,7 @@
 body{
 	font-family:vazir,tahoma;
 	font-size:16px;
+	overflow-x:hidden; 
 }
 .home-page{
 	overflow:hidden;
@@ -213,6 +214,7 @@ header a:hover{
 }
 
 /* SITE COURSES SECTION STYLES */
+/* style courses in the home-page */
 .courses-box{
 	margin-top:100px;
 }
@@ -264,6 +266,103 @@ header a:hover{
 	color:#fff;
 	border-radius:15px;
 }
+.pagination li{
+	padding: 0 5px;
+}
+.pagination li a{
+	border-radius: 50%;
+}
+
+/*style courses in the courses page */
+.sections{
+	width:100%;
+	margin: 0;
+	display: flex;
+	vertical-align: middle;
+	padding: 20px;
+	font-size: 16px;
+}
+.sections span{
+	padding: 0 9px;
+}
+.sections .right .fa-unlock-alt,
+.sections .left .fa-play{
+	color: #4caf50;
+}
+.sections .left span{
+	float: left;
+}
+.sections .left .fa-file-code{
+	font-size: 20px;
+}
+.course-content hr{
+	width:20%;
+	opacity:1;
+	color:#5000ca;
+	height:5px;
+	border-radius:2px;
+}
+.course-content h4{
+	font-weight: 800;
+	padding: 0;
+}
+.course-detail{
+	padding:20px;
+}
+.course-detail .btn{
+	width:100%;
+}
+.course-detail .detail .progress{
+	width:100%;
+	border-radius:15px;
+	background:#8c1dba;
+	display:grid;
+	place-items:center;
+	height:25px;
+}
+.detail .progress span{
+	color:#fff;
+	padding-top:2px;	 
+	font-weight:800;
+}
+.detail .row{
+	margin-top: 15px;
+}
+.detail .row div:nth-child(2){
+	text-align:left;
+}
+.comment-box .create-new-comment{
+	display: none;
+}
+.comment-box .show-create-comment{
+	display: block;
+}
+.comment-box .comment-holder img{
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+}
+.comment-holder .text-holder .date-name,
+.comment-holder .text-holder .thumbs{
+	opacity: .5;
+}
+.comment-holder .text-holder .thumbs{
+	text-align: left;
+}
+.comment-holder .date-name span{
+	display: block;
+	font-weight: 600;
+}
+.reply-comment{
+	width:70px;
+}
+.create-reply-comment{
+	display: none;
+}
+.show-reply-box{
+	display: block;
+}
+
 
 /* STYLES SECTION OF HOW THE SITE WORKS */
 .site-works{
@@ -352,6 +451,13 @@ header a:hover{
 	.login-modal .wrapper{
 		width:80%;
 	}
+	.course-content hr{
+	    width:35%;
+	    opacity:1;
+	    color:#5000ca;
+	    height:5px;
+	    border-radius:2px;
+    }
 }
 
 @media (max-width:992px){
@@ -370,6 +476,13 @@ header a:hover{
 	.Separator{
 		width:20%;
 	}
+	.course-content hr{
+	    width:30%;
+	    opacity:1;
+	    color:#5000ca;
+	    height:5px;
+	    border-radius:2px;
+    }
 }
 
 @media (max-width:1200px){
