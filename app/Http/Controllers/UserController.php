@@ -49,7 +49,7 @@ class UserController extends ImageUploder
     {
 
         $user   =   Count::find(1)  ;
-        event(new  CounterViewsUser($user)) ;
+//        event(new  CounterViewsUser($user)) ;
         return view('users.index' , ['users' => User::all()])     ;
     }
 

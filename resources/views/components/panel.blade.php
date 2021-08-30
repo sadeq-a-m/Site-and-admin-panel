@@ -34,7 +34,14 @@
                     <li><a href="#">تنظیم 1</a></li>
                     <li><a href="#">تنظیم 1</a></li>
                     <li><a href="#">تنظیم 1</a></li>
-                    <li><a href="#">تنظیم 1</a></li>
+
+                    <form  action="{{route('logout')}}" method="post">
+                        @csrf
+
+
+                        <li><button>خروج </button></li>
+                    </form>
+
                 </ul>
             </aside>
 

@@ -18,6 +18,9 @@
                 <th>عکس مقاله</th>
                 <th>متن مقاله</th>
                 <th>تاریخ ثبت مقاله</th>
+                <th>فعال و غیر فعال</th>
+                <th>فعال</th>
+                <th>غیر فعال</th>
                 <th>بروزرسانی</th>
                 <th>حذف</th>
             </tr>
@@ -36,6 +39,65 @@
                 <td><img src="/storage/posts/{{$post->image_post}}" width="100px"></td>
                 <td>{{$post->description}}</td>
                 <td>{{\Hekmatinasser\Verta\Verta::instance($post->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
+
+
+                <th>
+                    <input type="checkbox"
+                           @if($post->accept   ==  true)
+
+                           checked
+                            @endif
+                    >
+                </th>
+
+                <td>
+                    <form method="post" action="{{route('accept_post' ,   $post->id)}}">
+                        @csrf
+                        @method('PUT')
+
+
+                        <button class="btn btn-primary"
+
+                                @if($post->accept   ==  1   )
+                                disabled
+                                @endif
+
+                        >
+
+
+
+                            Attach</button>
+
+
+                    </form>
+
+                </td>
+
+
+                <td>
+
+
+
+                    <form method="post" action="{{route('disable_post'  ,   $post->id)}}">
+                        @csrf
+                        @method('PUT')
+
+
+                        <button class="btn btn-danger"
+
+                                @if($post->accept   ==  0   )
+                                disabled
+                                @endif
+
+                        >
+
+
+
+                            deatach</button>
+
+
+                    </form>
+                </td>
 
 
 

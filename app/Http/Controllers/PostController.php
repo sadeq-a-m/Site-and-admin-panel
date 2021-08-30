@@ -144,4 +144,25 @@ class PostController extends ImageUploder
         $post->delete() ;
         return back()   ;
     }
+
+
+
+    public function accept(Post $post)
+    {
+        $post->accept =   true    ;
+        $post->update()   ;
+        return   back()  ;
+    }
+
+
+
+
+
+
+    public function disable(Post $post)
+    {
+        $post->accept    =   false   ;
+        $post->update();
+        return  back();
+    }
 }

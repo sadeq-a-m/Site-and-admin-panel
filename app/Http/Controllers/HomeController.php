@@ -31,7 +31,8 @@ class HomeController extends Controller
 
     public function all_post()
     {
-        $posts  =   Post::all() ;
+
+        $posts   = Post::where('accept' ,   1)->get()   ;
         return  view('home.show_all_post' , ['posts'     =>      $posts])    ;
     }
 }
