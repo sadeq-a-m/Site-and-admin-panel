@@ -41,6 +41,9 @@ Route::get('/cache' ,   'CacheController@index') ;
 Route::middleware(['auth'])->prefix('admin')->group(function (){
 
 
+    Route::get('/charts' , 'ChartController@index')->name('charts') ;
+
+
     Route::put('/apost/{post}'  ,   'PostController@accept')->name('accept_post')  ;
     Route::put('/dpost/{post}'  ,   'PostController@disable')->name('disable_post')  ;
 

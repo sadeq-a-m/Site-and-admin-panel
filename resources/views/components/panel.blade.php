@@ -83,7 +83,7 @@
             <hr/>
             <nav>
                 <ul class="menu">
-                    <li class="title"><a href="index.html"><span class="fa fa-tachometer"></span><span class="text"> داشبورد <small class="label">جدید</small></span></a></li>
+                    <li class="title"><a href="{{route('panel.index')}}"><span class="fa fa-tachometer"></span><span class="text"> داشبورد <small class="label">جدید</small></span></a></li>
                     <li><a href="#"><span class="fa fa-layer-group"></span><span class="text"> لایه های صفحه </span></a></li>
                     <li><a href="#"><span class="fa fa-th"></span><span class="text"> ویجت ها</span></a></li>
                     <li><a href="#"><span class="fa fa-chart-bar"></span><span class="text"> نمودارها</span></a></li>
@@ -97,6 +97,7 @@
                     @include('components.sidbar.roles')
                     @include('components.sidbar.posts')
                     @include('components.sidbar.categores')
+                    @include('components.sidbar.charts')
 
 
 

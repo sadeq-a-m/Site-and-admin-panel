@@ -62,64 +62,14 @@
         </header>
     </div>
 
-    <!-- Site landing section codes -->
-    <div class="middle">
-        <div class="svg-patern">
-            <img src="../site/image/wave.svg" alt="svg-header" />
-        </div>
-        <div class="row landing">
-            <div class="row landing-img">
-                <img src="../site/image/home-background.svg" alt="men-programer"/>
-            </div>
-            <div class="row landing-text">
-                <h1>پروگیران <br/>مرجع آموزش برنامه نویسی</h1>
-                <div class="landing-btn">
-                    <button class="btn btn-primary">مشاوره رایگان</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    @yield('head')
 
 
     <!-- Codes of the main part of the site -->
     <div class="main-content">
         <main>
 
-            <!-- Site service section codes -->
-            <div class="row services">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-                    <div class="service-icon">
-                        <img src="https://img.icons8.com/nolan/128/money-circulation.png" alt="icon-money"/>
-                    </div>
-                    <div class="txt-box">
-                        <p>صرف کمترین هزینه</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-                    <div class="service-icon">
-                        <img src="https://img.icons8.com/nolan/128/google-classroom.png" alt="icon-teachers"/>
-                    </div>
-                    <div class="txt-box">
-                        <p>اساتید مجرب</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-                    <div class="service-icon">
-                        <img src="https://img.icons8.com/nolan/128/technical-support.png" alt="icon-support"/>
-                    </div>
-                    <div class="txt-box">
-                        <p>مشاوره رایگان</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 box">
-                    <div class="service-icon">
-                        <img src="https://img.icons8.com/nolan/128/communication.png" alt="icon-ask $ question"/>
-                    </div>
-                    <div class="txt-box">
-                        <p>پرسش و پاسخ</p>
-                    </div>
-                </div>
-            </div>
+
 
             <!-- Site courses section codes -->
 
