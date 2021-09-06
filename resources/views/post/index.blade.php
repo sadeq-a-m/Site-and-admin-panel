@@ -23,6 +23,7 @@
                 <th>غیر فعال</th>
                 <th>بروزرسانی</th>
                 <th>حذف</th>
+                <th>قسمت ها </th>
             </tr>
             </thead>
             <tbody>
@@ -123,6 +124,8 @@
                         <button class="btn btn-danger">حذف مقاله</button>
                     </form>
                 </td>
+
+                <td><a href="{{route('episode.index')}}">قسمت ها</a> </td>
 
             </tr>
 

@@ -41,6 +41,9 @@ Route::get('/cache' ,   'CacheController@index') ;
 Route::middleware(['auth'])->prefix('admin')->group(function (){
 
 
+    Route::get('/episodes' , "EpisodeController@index")->name('episode.index');
+
+
     Route::get('/charts' , 'ChartController@index')->name('charts') ;
 
 
