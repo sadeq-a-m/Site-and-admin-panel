@@ -68,7 +68,7 @@
                                 <span>{{$episode->episode_title}}</span>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left">
-                                <span><a href="#"><i class="fas fa-play"></i></a></span>
+                                <span><a href="{{route('episode.show' , $episode->id)}}"><i class="fas fa-play"></i></a></span>
                                 <span><button type="button" class="btn p-0"><i class="fas fa-file-code"></i></button></span>
                                 <span><time>00:08:17</time></span>
                                 <span>رایگان</span>

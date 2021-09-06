@@ -49,6 +49,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function (){
     Route::put('/free/{episode}'  ,   'EpisodeController@free')->name('episode.free')  ;
     Route::put('/buy/{episode}'  ,   'EpisodeController@buy')->name('episode.buy')  ;
     Route::delete('/delete/{episode}' , 'EpisodeController@delete')->name('episode.delete') ;
+    Route::get('/show/{episode}' , 'EpisodeController@show')->name('episode.show')  ;
 
 
 

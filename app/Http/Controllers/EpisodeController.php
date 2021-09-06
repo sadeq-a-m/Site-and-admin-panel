@@ -71,4 +71,12 @@ class EpisodeController extends ImageUploder
         return  redirect(route('episode.index' , $episode->post->id))  ;
 
     }
+
+
+
+    public function show(Episode $episode)
+    {
+
+        return view('posts.episode' , ['episode' => $episode]) ;
+    }
 }
