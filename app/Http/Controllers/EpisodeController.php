@@ -16,7 +16,8 @@ class EpisodeController extends Controller
     public function index()
     {
 
-        return view('panel.episodes.index') ;
+        $episodes   =    Episode::all()  ;
+        return view('panel.episodes.index' , ['episodes' => $episodes]) ;
     }
 
 
@@ -38,5 +39,24 @@ class EpisodeController extends Controller
        $data    =   $request->all() ;
        Episode::create($data)   ;
        return  redirect(route('episode.index'))  ;
+    }
+
+
+
+    public function free(Episode $episode)
+    {
+        $episode->is_free =   true    ;
+        $episode->update()   ;
+        return   back()  ;
+    }
+
+
+
+
+    public function buy(Episode $episode)
+    {
+        $episode->is_free    =   false   ;
+        $episode->update();
+        return  back();
     }
 }
