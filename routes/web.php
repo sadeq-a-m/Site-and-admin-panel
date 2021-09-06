@@ -43,7 +43,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function (){
 
 
 
-    Route::get('/episodes' , "EpisodeController@index")->name('episode.index');
+    Route::get('/episodes/{post}' , "EpisodeController@index")->name('episode.index');
     Route::get('/create/{post}' , 'EpisodeController@create')->name('episode.create')  ;
     Route::post('/store' , 'EpisodeController@store')->name('episode.store')   ;
     Route::put('/free/{episode}'  ,   'EpisodeController@free')->name('episode.free')  ;

@@ -12,5 +12,4 @@ class Episode extends Model
 
 
 
-
 }

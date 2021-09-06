@@ -126,7 +126,7 @@
                     </form>
                 </td>
 
-                <td><a href="{{route('episode.index')}}">قسمت ها</a> </td>
+                <td><a href="{{route('episode.index' , $post->id)}}">قسمت ها</a> </td>
                 <td><a href="{{route('episode.create'  , $post->id)}}"> افزودن قسمت</a> </td>
 
             </tr>

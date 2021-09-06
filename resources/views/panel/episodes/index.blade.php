@@ -34,7 +34,7 @@
 
 
                     <td>{{$episode->episode_title}}</td>
-                    <td><img src="/storage/posts/" width="100px"></td>
+                    <td><img src="/storage/posts/{{$episode->episode_video}}" width="100px"></td>
 
                     <td>{{\Hekmatinasser\Verta\Verta::instance($episode->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</td>
 

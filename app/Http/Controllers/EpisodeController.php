@@ -7,16 +7,16 @@ use App\Http\Requests\EpisodeRequest;
 use App\Post;
 use Illuminate\Http\Request;
 
-class EpisodeController extends Controller
+class EpisodeController extends ImageUploder
 {
 
 
 
 
-    public function index()
+    public function index(Post $post)
     {
 
-        $episodes   =    Episode::all()  ;
+        $episodes   =  $post->episode ;
         return view('panel.episodes.index' , ['episodes' => $episodes]) ;
     }
 
@@ -37,8 +37,10 @@ class EpisodeController extends Controller
     {
 
        $data    =   $request->all() ;
+       $imageurl =  $this->uploadImage(request()->file('episode_video')  , 'posts')  ;
+       $data['episode_video'] =   $imageurl   ;
        Episode::create($data)   ;
-       return  redirect(route('episode.index'))  ;
+       return  redirect(route('episode.index' , $request->post_id))  ;
     }
 
 
