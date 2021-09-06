@@ -11,7 +11,7 @@
 
 
 
-                    <img src="/storage/posts/{{$episode->episode_video}}" width="100px">
+                    <img src="/storage/posts/{{$episode->episode_video}}" width="700px" height="400px">
 
 
 
