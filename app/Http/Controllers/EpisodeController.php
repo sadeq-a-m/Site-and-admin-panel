@@ -61,4 +61,14 @@ class EpisodeController extends ImageUploder
         $episode->update();
         return  back();
     }
+
+
+
+    public function delete(Episode $episode)
+    {
+
+        $episode->delete()  ;
+        return  redirect(route('episode.index' , $episode->post->id))  ;
+
+    }
 }

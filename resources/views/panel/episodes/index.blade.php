@@ -114,7 +114,7 @@
 
 
                     <td>
-                        <form method="post" action="#" >
+                        <form method="post" action="{{route('episode.delete' , $episode->id)}}" >
                             @csrf
                             @method('DELETE')
 
