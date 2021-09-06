@@ -24,6 +24,7 @@
                 <th>بروزرسانی</th>
                 <th>حذف</th>
                 <th>قسمت ها </th>
+                <th>افزودن قسمت </th>
             </tr>
             </thead>
             <tbody>
@@ -126,6 +127,7 @@
                 </td>
 
                 <td><a href="{{route('episode.index')}}">قسمت ها</a> </td>
+                <td><a href="{{route('episode.create'  , $post->id)}}"> افزودن قسمت</a> </td>
 
             </tr>
 

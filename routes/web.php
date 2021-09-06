@@ -42,6 +42,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function (){
 
 
     Route::get('/episodes' , "EpisodeController@index")->name('episode.index');
+    Route::get('/create/{post}' , 'EpisodeController@create')->name('episode.create')  ;
+    Route::post('/store' , 'EpisodeController@store')->name('episode.store')   ;
 
 
     Route::get('/charts' , 'ChartController@index')->name('charts') ;
