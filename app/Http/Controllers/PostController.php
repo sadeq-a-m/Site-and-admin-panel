@@ -42,6 +42,7 @@ class PostController extends ImageUploder
         return view('post.create'   ,   ['categores'    =>  $categores])  ;
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
