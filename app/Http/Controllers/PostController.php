@@ -42,6 +42,7 @@ class PostController extends ImageUploder
         return view('post.create'   ,   ['categores'    =>  $categores])  ;
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -78,8 +79,8 @@ class PostController extends ImageUploder
      */
     public function show($id)
     {
-        $post   =   Post::find($id)     ;
-        return view('posts.index')  ;
+        $posts   =   Post::find($id)     ;
+        return view('posts.index' , ['posts' => $posts])  ;
 
     }
 

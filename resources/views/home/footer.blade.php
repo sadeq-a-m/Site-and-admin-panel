@@ -9,8 +9,8 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 trust-logo">
             <ul>
-                <li><a href="#"><img src="../site/image/parsian-logo.jpg" alt="logo-parsian"/></a></li>
-                <li><a href="#"><img src="../site/image/nashr-logo.jpg" alt="logo-nashr"/></a></li>
+                <li><a href="#"><img src="{{'/site/image/parsian-logo.jpg'}}" alt="logo-parsian"/></a></li>
+                <li><a href="#"><img src="{{'/site/image/nashr-logo.jpg'}}" alt="logo-nashr"/></a></li>
             </ul>
         </div>
     </div>

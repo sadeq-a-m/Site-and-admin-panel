@@ -41,7 +41,19 @@ Route::get('/cache' ,   'CacheController@index') ;
 Route::middleware(['auth'])->prefix('admin')->group(function (){
 
 
-    Route::get('/episodes' , "EpisodeController@index")->name('episode.index');
+
+
+    Route::get('/episodes/{post}' , "EpisodeController@index")->name('episode.index') ;
+    Route::get('/create/{post}' , 'EpisodeController@create')->name('episode.create')  ;
+    Route::post('/store' , 'EpisodeController@store')->name('episode.store')   ;
+    Route::put('/free/{episode}'  ,   'EpisodeController@free')->name('episode.free')  ;
+    Route::put('/buy/{episode}'  ,   'EpisodeController@buy')->name('episode.buy')  ;
+    Route::delete('/delete/{episode}' , 'EpisodeController@delete')->name('episode.delete') ;
+    Route::get('/show/{episode}' , 'EpisodeController@show')->name('episode.show')  ;
+
+
+
+
 
 
     Route::get('/charts' , 'ChartController@index')->name('charts') ;

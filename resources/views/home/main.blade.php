@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{{asset('/site/bootstrap/css/bootstrap.rtl.css')}}">
     <link rel="stylesheet" href="{{asset('/site/style/homepage.css')}}">
+
     <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
     <title>home</title>
 </head>

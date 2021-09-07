@@ -19,11 +19,11 @@ class CreateEpisodesTable extends Migration
             $table->unsignedBigInteger('post_id')   ;
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade')  ;
 
-            $table->integer('episode')->unique()    ;
-            $table->string('title') ;
+            $table->integer('episode')->default(1)    ;
+            $table->string('episode_title') ;
             $table->boolean("is_free")->default(true)  ;
-            $table->text('video')   ;
-            $table->float('value')  ;
+            $table->text('episode_video')   ;
+            $table->float('value')->default(12)  ;
 
             $table->timestamps();
         });

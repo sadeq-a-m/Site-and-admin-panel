@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../site/style/404.css">
+    <link rel="stylesheet" href="{{asset('../site/style/404.css')}}">
     <title>error-404</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
             <p>404 - PAGE NOT FOUND</p>
         </div>
         <div class="icons404">
-            <img src="../site/image/planet.png" class="planet"/><img src="../site/image/ufo.png" class="ufo"/>
+            <img src="{{asset('../site/image/planet.png')}}" class="planet"/><img src="{{asset('../site/image/planet.png')}}" class="ufo"/>
         </div>
         <div class="back-btn">
             <p>متاسفم صفحه مورد نظر شما یافت نشد !!</p>

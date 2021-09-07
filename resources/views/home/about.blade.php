@@ -2,7 +2,7 @@
 
 <div class="row container site-works">
     <div class="col-lg-4 hidden-md">
-        <img src="../site/image/4.jpg" alt="men-programer"/>
+        <img src="{{'/site/image/4.jpg'}}" alt="men-programer"/>
     </div>
     <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 container txt-box">
         <div class="row">

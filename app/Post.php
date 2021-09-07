@@ -25,5 +25,15 @@ class Post extends Model
     }
 
 
+
+
+
+    public function episode()
+    {
+
+        return$this->hasMany(Episode::class)    ;
+    }
+
+
 }
 
