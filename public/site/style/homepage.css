@@ -306,13 +306,13 @@ header a:hover{
 	font-weight: 800;
 	padding: 0;
 }
-.course-detail{
+.detail-holder{
 	padding:20px;
 }
-.course-detail .btn{
+.detail-holder .btn{
 	width:100%;
 }
-.course-detail .detail .progress{
+.detail-holder .detail .progress{
 	width:100%;
 	border-radius:15px;
 	background:#8c1dba;

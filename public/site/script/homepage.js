@@ -3,6 +3,7 @@ let searchMinIcon=document.querySelector('.search-min')
 let searchModal=document.querySelector('.search-modal')
 let iconCloseSearchModal=document.querySelector('.close-search')
 
+//search event
 searchIcon.onclick = ()=>{
 	searchModal.style.transform="translateX(0%)";
 }
@@ -21,6 +22,8 @@ searchMinIcon.addEventListener('click',()=>{
 	searchIcon.onclick();
 })
 
+
+//hamburger menu in the small devices
 let hamburger=document.querySelector('.hamburger')
 let menuModal=document.querySelector('.menu-modal-min')
 let iconCloseMenuModal=document.querySelector('.close-menu')
@@ -39,6 +42,8 @@ iconCloseMenuModal.addEventListener('click',()=>{
 	menuModal.style.transform="translateX(-100%)";
 })
 
+
+//call with us
 let contactUs=document.querySelector('.call')
 
 contactUs.addEventListener('click',()=>{
@@ -47,6 +52,7 @@ contactUs.addEventListener('click',()=>{
 })
 
 
+//comments courses
 let showCommentBox=document.getElementById('show-comment-box')
 let createNewComment=document.querySelector('.create-new-comment')
 
