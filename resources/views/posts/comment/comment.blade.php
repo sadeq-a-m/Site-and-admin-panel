@@ -15,7 +15,7 @@
                @csrf
 
             <input type="hidden" value="{{$posts->id}}" name="post_id">
-            <textarea  name="comment" cols="30" rows="10" class="mt-3" placeholder="متن نظر"></textarea>
+            <textarea rows="8" cols="80"  name="comment" cols="30" rows="10" class="mt-3" placeholder="متن نظر"></textarea>
             <button class="btn btn-primary mt-3">ارسال دیدگاه</button>
            </form>
 
@@ -27,16 +27,21 @@
 
 
 
+
+
+    @foreach($posts->comment as $comment)
+
+
     <div class="comment-holder mt-4 container">
         <div class="row mt-4 container">
             <div>
-                <img src="{{'/site/image/1.jpg'}}" alt="user-image">
+                <img src="/storage/users/{{$comment->user->image}}" alt="user-image">
             </div>
             <div class=" mt-3 text-holder">
                 <div class="row">
                     <div class="col-6 date-name">
-                        <span>صادق علیمرادی</span>
-                        <date>1399/3/2</date>
+                        <span>{{$comment->user->name}}</span>
+                        <date>{{\Hekmatinasser\Verta\Verta::instance($comment->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</date>
                     </div>
                     <div class="col-6 thumbs">
                         <button class="btn">0 <i class="fas fa-thumbs-up"></i></button>
@@ -44,8 +49,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>سلام ممنون از دوره جامع و کاربردیتون
-                        امیدوارم این دوره ادامه داشته باشه در سطح پیشرفته</p>
+                    <p>{{$comment->comment}}</p>
                 </div>
                 <div class="row reply-box">
                     <button class="btn btn-info reply-comment">پاسخ</button>
@@ -59,6 +63,8 @@
             </div>
         </div>
     </div>
+
+    @endforeach
 
 
 </div>
