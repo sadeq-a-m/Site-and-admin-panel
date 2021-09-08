@@ -56,6 +56,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function (){
 
 
    Route::post('/comment' , 'CommentController@store')->name('comment.store')   ;
+   Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 
 
 
