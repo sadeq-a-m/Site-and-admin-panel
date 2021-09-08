@@ -1,6 +1,4 @@
-
-
-
+<!-- about us -->
 <div class="container">
     <div class="row about">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 txt-about">
@@ -9,8 +7,8 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 trust-logo">
             <ul>
-                <li><a href="#"><img src="{{'/site/image/parsian-logo.jpg'}}" alt="logo-parsian"/></a></li>
-                <li><a href="#"><img src="{{'/site/image/nashr-logo.jpg'}}" alt="logo-nashr"/></a></li>
+                <li><a href="#"><img src="/site/image/parsian-logo.jpg" alt="logo-parsian"/></a></li>
+                <li><a href="#"><img src="/site/image/nashr-logo.jpg" alt="logo-nashr"/></a></li>
             </ul>
         </div>
     </div>
@@ -18,6 +16,7 @@
 
 <hr class="container"/>
 
+<!-- Register -->
 <div class="container">
     <div class="row footer-membership">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 txt-box">
@@ -38,6 +37,7 @@
 
 <hr class="container"/>
 
+<!-- quick access -->
 <div class="container">
     <div class="row instruction-site">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -66,7 +66,7 @@
                 <li><a href="#">قوانین کسب درآمد</a></li>
             </ul>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="call">
             <ul>
                 <li><h4>راه های ارتباطی</h4></li>
                 <li><a href="#">تلفن:09351234567</a></li>
@@ -77,6 +77,7 @@
     </div>
 </div>
 
+<!-- law copyright -->
 <div class="row copyright">
     <div class="container">
         <span>تمامی حقوق مادی و معنوی متعلق به آکادمی پروگیران میباشد و هرگونه کپی برداری غیر مجاز میباشد</span>

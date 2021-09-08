@@ -1,3 +1,4 @@
+
 let searchIcon=document.querySelector('.search')
 let searchMinIcon=document.querySelector('.search-min')
 let searchModal=document.querySelector('.search-modal')
@@ -46,10 +47,10 @@ iconCloseMenuModal.addEventListener('click',()=>{
 //call with us
 let contactUs=document.querySelector('.call')
 
-contactUs.addEventListener('click',()=>{
-	menuModal.style.transform="translateX(-100%)";
-	console.log('loged')
-})
+// contactUs.addEventListener('click',()=>{
+// 	menuModal.style.transform="translateX(-100%)";
+// 	console.log('loged')
+// })
 
 
 //comments courses

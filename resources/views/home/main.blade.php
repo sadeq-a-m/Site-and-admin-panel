@@ -3,13 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <link rel="stylesheet" href="{{asset('/site/bootstrap/css/bootstrap.rtl.css')}}">
     <link rel="stylesheet" href="{{asset('/site/style/homepage.css')}}">
-
     <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
-    <title>home</title>
+    <title>progiran</title>
 </head>
 <body>
 
@@ -90,7 +87,6 @@
 </div>
 
 
-
-<script src="{{asset('site/script/homepage.js')}}"></script>
+<script src="{{asset('/site/script/homepage.js')}}"></script>
 </body>
 </html>

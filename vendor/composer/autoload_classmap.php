@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Categore' => $baseDir . '/app/Categore.php',
+    'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Count' => $baseDir . '/app/Count.php',
     'App\\Course' => $baseDir . '/app/Course.php',
@@ -38,6 +39,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\CategoreRequest' => $baseDir . '/app/Http/Requests/CategoreRequest.php',
+    'App\\Http\\Requests\\EpisodeRequest' => $baseDir . '/app/Http/Requests/EpisodeRequest.php',
     'App\\Http\\Requests\\PostRequest' => $baseDir . '/app/Http/Requests/PostRequest.php',
     'App\\Http\\Requests\\RoleRequest' => $baseDir . '/app/Http/Requests/RoleRequest.php',
     'App\\Http\\Requests\\UserRequesst' => $baseDir . '/app/Http/Requests/UserRequesst.php',
