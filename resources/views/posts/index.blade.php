@@ -1,6 +1,9 @@
 @extends('home.main')
 @section('content')
     <!-- tags of the main part of the site -->
+
+
+
     <div class="main-content">
         <div class="container mt-4">
             <div class="row">

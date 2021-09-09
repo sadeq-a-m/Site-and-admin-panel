@@ -19,7 +19,7 @@ class CommentController extends Controller
         $comment->user()->associate($request->user());
         $post = Post::find($request->get('post_id'));
         $post->comment()->save($comment);
-        return back()   ;
+        return back()->with('create' , 'کامنت شما ثبت شد ') ;   ;
 
     }
 

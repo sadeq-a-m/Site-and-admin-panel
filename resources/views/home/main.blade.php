@@ -11,6 +11,16 @@
 <body>
 
 
+
+
+@if ($message = Session::get('create'))
+
+
+{{--     TODO:: show mesaage--}}
+
+
+@endif
+
 <div class="row home-page" dir="rtl">
 
     <!-- Codes in the top menu section of the site -->
@@ -46,12 +56,16 @@
                     <a href="#"><i class="fas fa-times close-menu"></i></a>
                     <nav>
                         <ul>
-                            <li><a href="#">صفحه اصلی</a></li>
+                            <li><a href="{{route('index')}}">صفحه اصلی</a></li>
                             <li><a href="#">دوره های آموزشی</a></li>
                             <li><a href="#">مقالات</a></li>
                             <li><a href="#">همکاری</a></li>
                             <li><a href="#">درباره ما</a></li>
                             <li><a href="#">تماس با ما</a></li>
+                            @if(Auth::check())
+                                <li><a href="{{route('panel.index')}}">پنل</a></li>
+
+                            @endif
                         </ul>
                     </nav>
                 </div>
