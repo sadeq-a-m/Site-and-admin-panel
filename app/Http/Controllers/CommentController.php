@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Comment;
 use App\Post;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
+use function Couchbase\basicDecoderV1;
+
 
 class CommentController extends Controller
 {
@@ -14,12 +17,26 @@ class CommentController extends Controller
     public function store(Request $request)
     {
 
-        $comment = new Comment;
-        $comment->comment = $request->get('comment');
-        $comment->user()->associate($request->user());
-        $post = Post::find($request->get('post_id'));
-        $post->comment()->save($comment);
-        return back()->with('create' , 'کامنت شما ثبت شد ') ;   ;
+
+
+//        $comment = new Comment;
+//        $comment->comment = $request->comment ;
+//        $comment->user()->associate($request->user());
+//        $post = Post::find($request->get('post_id'));
+//        $post->comment()->save($comment);
+
+
+        Comment::create([
+            'user_id' => 1 ,
+            'commentable_id' => 1 ,
+            'commentable_type' => 'App\Post' ,
+            'comment' => $request->comment ,
+
+        ]);
+
+
+        return response()->json(["res"   => "نظر با موفقت ثبت شد ."]);
+
 
     }
 
