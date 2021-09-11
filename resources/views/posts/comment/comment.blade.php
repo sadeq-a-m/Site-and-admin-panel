@@ -46,7 +46,11 @@
                            data : {comment : $("#comment").val()} ,
                            success : function (result){
 
-                               $("#show_comments").load(location.href + " #show_comments");
+
+                               window.location.reload();
+                           //    window.location = window.location.pathname;
+                            //   location.reload();
+                           //    $("#show_comments").append($('#show_comments'));
 
                                }
 
