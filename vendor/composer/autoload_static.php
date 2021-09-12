@@ -467,6 +467,7 @@ class ComposerStaticInit7e62abfd646f439b3418f803816fe6b8
 
     public static $classMap = array (
         'App\\Categore' => __DIR__ . '/../..' . '/app/Categore.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Count' => __DIR__ . '/../..' . '/app/Count.php',
         'App\\Course' => __DIR__ . '/../..' . '/app/Course.php',
@@ -498,6 +499,7 @@ class ComposerStaticInit7e62abfd646f439b3418f803816fe6b8
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\CategoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CategoreRequest.php',
+        'App\\Http\\Requests\\EpisodeRequest' => __DIR__ . '/../..' . '/app/Http/Requests/EpisodeRequest.php',
         'App\\Http\\Requests\\PostRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PostRequest.php',
         'App\\Http\\Requests\\RoleRequest' => __DIR__ . '/../..' . '/app/Http/Requests/RoleRequest.php',
         'App\\Http\\Requests\\UserRequesst' => __DIR__ . '/../..' . '/app/Http/Requests/UserRequesst.php',

@@ -87,6 +87,11 @@
 
 
 
+        @if($posts->count()   == 0 )
+
+           <h1>موردی یافت نشد </h1>
+
+        @else
 
 
         @foreach($posts    as      $post)
@@ -120,6 +125,8 @@
 
 
         @endforeach
+
+        @endif
 
 
 

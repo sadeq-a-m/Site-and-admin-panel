@@ -2,17 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <link rel="stylesheet" href="{{asset('/site/bootstrap/css/bootstrap.rtl.css')}}">
     <link rel="stylesheet" href="{{asset('/site/style/homepage.css')}}">
-
     <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
-    <title>home</title>
+    <title>progiran</title>
 </head>
 <body>
 
+
+
+
+@if ($message = Session::get('create'))
+
+
+{{--     TODO:: show mesaage--}}
+
+
+@endif
 
 <div class="row home-page" dir="rtl">
 
@@ -49,12 +57,16 @@
                     <a href="#"><i class="fas fa-times close-menu"></i></a>
                     <nav>
                         <ul>
-                            <li><a href="#">صفحه اصلی</a></li>
+                            <li><a href="{{route('index')}}">صفحه اصلی</a></li>
                             <li><a href="#">دوره های آموزشی</a></li>
                             <li><a href="#">مقالات</a></li>
                             <li><a href="#">همکاری</a></li>
                             <li><a href="#">درباره ما</a></li>
                             <li><a href="#">تماس با ما</a></li>
+                            @if(Auth::check())
+                                <li><a href="{{route('panel.index')}}">پنل</a></li>
+
+                            @endif
                         </ul>
                     </nav>
                 </div>
@@ -90,7 +102,6 @@
 </div>
 
 
-
-<script src="{{asset('site/script/homepage.js')}}"></script>
+<script src="{{asset('/site/script/homepage.js')}}"></script>
 </body>
 </html>

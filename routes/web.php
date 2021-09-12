@@ -30,6 +30,8 @@ Route::get('/403' , function (){
 })  ;
 
 
+
+
 Route::get('/', 'HomeController@all_post')->name('index') ;
 
 
@@ -50,6 +52,11 @@ Route::middleware(['auth'])->prefix('admin')->group(function (){
     Route::put('/buy/{episode}'  ,   'EpisodeController@buy')->name('episode.buy')  ;
     Route::delete('/delete/{episode}' , 'EpisodeController@delete')->name('episode.delete') ;
     Route::get('/show/{episode}' , 'EpisodeController@show')->name('episode.show')  ;
+
+
+
+   Route::post('/comment' , 'CommentController@store')->name('comment.store')   ;
+   Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 
 
 

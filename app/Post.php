@@ -35,5 +35,15 @@ class Post extends Model
     }
 
 
+
+
+
+
+    public function comment()
+    {
+
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
+    }
+
 }
 
