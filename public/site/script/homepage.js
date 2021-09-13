@@ -47,10 +47,9 @@ iconCloseMenuModal.addEventListener('click',()=>{
 //call with us
 let contactUs=document.querySelector('.call')
 
-// contactUs.addEventListener('click',()=>{
-// 	menuModal.style.transform="translateX(-100%)";
-// 	console.log('loged')
-// })
+contactUs.addEventListener('click',()=>{
+ 	menuModal.style.transform="translateX(-100%)";
+})
 
 
 //comments courses
@@ -68,3 +67,31 @@ showReplyBox.forEach((item)=>{
 		item.nextElementSibling.classList.toggle('show-reply-box')
 	})
 })
+
+//alert codes
+
+ let alertModal=document.getElementById('alert')
+ let closeAlert=document.querySelector('.fa-times')
+
+//alert danger
+ function showAlertRed(){
+ 	alertModal.classList.add('alert-box-red')
+ }
+
+ closeAlert.addEventListener('click',()=>{
+ 	alertModal.classList.remove('alert-box-red')
+ })
+
+//alert success
+ function showAlertGreen(){
+ 	alertModal.classList.add('alert-box-green')
+ }
+
+ closeAlert.addEventListener('click',()=>{
+ 	alertModal.classList.remove('alert-box-green')
+ })
+
+//show alert
+//showAlertGreen()
+	
+
