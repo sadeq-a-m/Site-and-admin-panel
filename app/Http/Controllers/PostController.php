@@ -66,7 +66,7 @@ class PostController extends ImageUploder
            $post->categore()->attach(request('categores'))    ;
 
 
-        return redirect(route('posts.index')) ;
+        return redirect(route('posts.index'))->with('create' , "پست درست شد") ;
 
 
     }

@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('/style/index.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('/site/style/index.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('/site/style/style.css')}}">
+
     <script src="https://kit.fontawesome.com/99b8225ddb.js" crossorigin="anonymous"></script>
     <title>index</title>
 </head>
 <body>
+
+@if ($message = Session::get('create'))
+
+    <div id="alert" class="alert-box-green">
+        <div>
+            <p>{{$message}}</p>
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+@endif
 
 <div class="control-panel">
 
@@ -127,6 +139,7 @@
 </div>
 
 
-<script src="{{asset('/script/script.js')}}"></script>
+<script src="{{asset('/site/script/script.js')}}"></script>
+<script src="{{asset('/site/script/homepage.js')}}"></script>
 </body>
 </html>
