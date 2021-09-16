@@ -140,6 +140,5 @@
 
 
 <script src="{{asset('/site/script/script.js')}}"></script>
-<script src="{{asset('/site/script/homepage.js')}}"></script>
 </body>
 </html>

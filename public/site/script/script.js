@@ -37,6 +37,33 @@ let showProfile=document.getElementById('showProfile')
 let profileHolder=document.querySelector('.profile-holder')
 
 
-showProfile.addEventListener('click',()=>{
-    profileHolder.classList.toggle('show-profile')
+// showProfile.addEventListener('click',()=>{
+//     profileHolder.classList.toggle('show-profile')
+// })
+
+
+//alert codes
+
+let alertModal=document.getElementById('alert')
+let closeAlert=document.querySelector('.fa-times')
+
+//alert danger
+function showAlertRed(){
+	alertModal.classList.add('alert-box-red')
+}
+
+closeAlert.addEventListener('click',()=>{
+	alertModal.classList.remove('alert-box-red')
 })
+
+//alert success
+function showAlertGreen(){
+	alertModal.classList.add('alert-box-green')
+}
+
+closeAlert.addEventListener('click',()=>{
+	alertModal.classList.remove('alert-box-green')
+})
+
+//show alert
+//showAlertGreen()
