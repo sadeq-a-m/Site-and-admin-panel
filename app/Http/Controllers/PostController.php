@@ -66,7 +66,7 @@ class PostController extends ImageUploder
            $post->categore()->attach(request('categores'))    ;
 
 
-        return redirect(route('posts.index'))->with('create' , "پست درست شد") ;
+        return redirect(route('posts.index'))->with('post' , "مقاله جدید ایجاد شد. ") ;
 
 
     }
@@ -128,7 +128,7 @@ class PostController extends ImageUploder
 
        $post->categore()->detach($post->categore)  ;
        $post->categore()->attach(request('categores'))    ;
-       return redirect(route('posts.index'))    ;
+       return redirect(route('posts.index'))->with('post' , 'مقاله مورد نظر بروز رسانی شد . ')   ;
 
 
 
@@ -145,7 +145,7 @@ class PostController extends ImageUploder
 
         $post   =   Post::find($id)     ;
         $post->delete() ;
-        return back()   ;
+        return back()->with('postDestroy' , 'مقاله مورد نظر حذف شد . ')   ;
     }
 
 
@@ -154,7 +154,7 @@ class PostController extends ImageUploder
     {
         $post->accept =   true    ;
         $post->update()   ;
-        return   back()  ;
+        return   back()->with('post' , 'مقاله مورد نظر فعال شد .')  ;
     }
 
 
@@ -166,6 +166,6 @@ class PostController extends ImageUploder
     {
         $post->accept    =   false   ;
         $post->update();
-        return  back();
+        return  back()->with('post' , 'مقاله مورد نظر غیر فعال شد .');
     }
 }

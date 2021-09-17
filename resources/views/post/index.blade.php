@@ -6,6 +6,28 @@
 
 
 
+    @if ($message= Session::get('post'))
+
+        <div id="alert" class="alert-box-green">
+            <div>
+                <p>{{$message}}</p>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    @endif
+
+
+    @if ($message= Session::get('postDestroy'))
+
+        <div id="alert" class="alert-box-red">
+            <div>
+                <p>{{$message}}</p>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    @endif
+
+
 
 
     <div class="table-responsive table-holder">

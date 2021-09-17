@@ -11,15 +11,6 @@
 </head>
 <body>
 
-@if ($message = Session::get('create'))
-
-    <div id="alert" class="alert-box-green">
-        <div>
-            <p>{{$message}}</p>
-            <i class="fas fa-times"></i>
-        </div>
-    </div>
-@endif
 
 <div class="control-panel">
 
