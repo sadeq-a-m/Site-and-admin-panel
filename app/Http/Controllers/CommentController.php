@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comment;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Console\Input\Input;
 use function Couchbase\basicDecoderV1;
 
@@ -18,6 +19,7 @@ class CommentController extends Controller
     {
 
 
+    //    dd($request->post_id);
 
 //        $comment = new Comment;
 //        $comment->comment = $request->comment ;
@@ -27,8 +29,8 @@ class CommentController extends Controller
 
 
         Comment::create([
-            'user_id' => 1 ,
-            'commentable_id' => 1 ,
+            'user_id' => Auth::user()->id ,
+            'commentable_id' => $request->post_id,
             'commentable_type' => 'App\Post' ,
             'comment' => $request->comment ,
 

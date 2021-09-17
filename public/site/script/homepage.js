@@ -47,9 +47,9 @@ iconCloseMenuModal.addEventListener('click',()=>{
 //call with us
 let contactUs=document.querySelector('.call')
 
-contactUs.addEventListener('click',()=>{
- 	menuModal.style.transform="translateX(-100%)";
-})
+// contactUs.addEventListener('click',()=>{
+//  	menuModal.style.transform="translateX(-100%)";
+// })
 
 
 //comments courses

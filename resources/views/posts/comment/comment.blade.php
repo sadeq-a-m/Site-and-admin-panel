@@ -14,7 +14,7 @@
            <form method="post" action="{{route('comment.store')}}">
                @csrf
 
-            <input type="hidden" value="{{$posts->id}}" name="post_id">
+            <input id="post_id" type="hidden" value="{{$posts->id}}" name="post_id">
             <textarea id="comment" rows="8" cols="80"  name="comment" cols="30" rows="10" class="mt-3" placeholder="متن نظر"></textarea>
             <button  id="ajaxSubmit" class="btn btn-primary mt-3">ارسال دیدگاه</button>
            </form>
@@ -43,14 +43,11 @@
                            url : '{{ route('comment.store')}}' ,
                            method : 'POST' ,
                            dataType: 'JSON',
-                           data : {comment : $("#comment").val()} ,
+                           data : {comment : $("#comment").val() , post_id : $("#post_id").val()} ,
                            success : function (result){
 
 
                                window.location.reload();
-                           //    window.location = window.location.pathname;
-                            //   location.reload();
-                           //    $("#show_comments").append($('#show_comments'));
 
                                }
 
