@@ -44,9 +44,7 @@
                            method : 'POST' ,
                            dataType: 'JSON',
                            data : {comment : $("#comment").val() , post_id : $("#post_id").val()} ,
-                           success : function (result){
-
-
+                           success : function (res){
                                window.location.reload();
 
                                }
