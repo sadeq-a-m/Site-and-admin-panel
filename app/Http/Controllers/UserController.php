@@ -80,7 +80,7 @@ class UserController extends ImageUploder
 
        $user->role()->attach($role)  ;
 
-       return redirect(route('panel.users'))   ;
+       return redirect(route('panel.users'))->with('user'  , 'کاربر جدید ایجاد شد .')   ;
     }
 
     /**
@@ -143,7 +143,7 @@ class UserController extends ImageUploder
         $user->role()->attach($role)  ;
 
 
-        return redirect(route('panel.users'))  ;
+        return redirect(route('panel.users'))->with('user' , 'کاربر مورد نظر بروز رسانی شد .')  ;
 
 
     }
@@ -159,6 +159,6 @@ class UserController extends ImageUploder
         $user = User::find($id)     ;
 
         $user->delete();
-        return back() ;
+        return back()->with('userDestroy' , 'کاربر مورد نظر حذف شد .') ;
     }
 }

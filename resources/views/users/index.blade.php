@@ -2,7 +2,33 @@
 @extends('components.panel')
 
 
+
 @section('content')
+
+
+    @if ($message= Session::get('user'))
+
+        <div id="alert" class="alert-box-green">
+            <div>
+                <p>{{$message}}</p>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    @endif
+
+
+    @if ($message= Session::get('userDestroy'))
+
+        <div id="alert" class="alert-box-red">
+            <div>
+                <p>{{$message}}</p>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    @endif
+
+
+
 <div class="page-content">
     <div class="table-responsive table-holder">
         <h2>مدیریت کاربران</h2>
