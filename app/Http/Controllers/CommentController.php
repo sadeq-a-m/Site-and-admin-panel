@@ -43,13 +43,30 @@ class CommentController extends Controller
 
     public function replyStore(Request $request)
     {
-//        $reply = new Comment();
-//        $reply->comment = $request->get('comment');
-//        $reply->user()->associate($request->user());
-//        $reply->parent_id = $request->get('parent_id');
-//        $post = Post::find($request->get('post_id'));
-//        $post->comment()->save($reply);
-//        return back();
+        $reply = new Comment();
+        $reply->comment = $request->get('comment');
+        $reply->user()->associate($request->user());
+        $reply->parent_id = $request->get('parent_id');
+        $post = Post::find($request->get('post_id'));
+        $post->comment()->save($reply);
+        return back();
+
+
+
+
+//
+//
+//
+//        Comment::create([
+//            'user_id' => Auth::user()->id ,
+//            'parent_id' => $request->parent_id ,
+//            'commentable_id' => $request->post_id,
+//            'commentable_type' => 'App\Post' ,
+//            'comment' => $request->comment ,
+//        ]);
+//
+//        return response()->json(["result"   => "نظر با موفقت ثبت شد ."]);
+    }
 
 
 
@@ -57,15 +74,34 @@ class CommentController extends Controller
 
 
 
-        Comment::create([
-            'user_id' => Auth::user()->id ,
-            'parent_id' => $request->parent_id ,
-            'commentable_id' => $request->post_id,
-            'commentable_type' => 'App\Post' ,
-            'comment' => $request->comment ,
-        ]);
 
-        return response()->json(["result"   => "نظر با موفقت ثبت شد ."]);
+
+
+    public function like(Comment $comment , Request $request)
+    {
+
+       $comment->update([
+
+           'like' => $request->like + 1
+       ])   ;
+
+       return back()    ;
+
+
+    }
+
+
+
+
+    public function dislike(Comment $comment , Request $request)
+    {
+
+        $comment->update([
+
+            'dislike' => $request->dislike + 1
+        ])   ;
+
+        return back()    ;
     }
 
 }

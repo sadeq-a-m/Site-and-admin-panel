@@ -20,13 +20,45 @@
                         <date>{{\Hekmatinasser\Verta\Verta::instance($comment->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::now())}}</date>
                     </div>
                     <div class="col-6 thumbs">
-                        <button class="btn">0 <i class="fas fa-thumbs-up"></i></button>
-                        <button class="btn">0 <i class="fas fa-thumbs-down"></i></button>
+
+
+
+
+                        <form method="post" action="{{route('comment.like' , $comment->id)}}">
+
+                            @csrf
+                            <input type="hidden" name="like" value="{{$comment->like}}">
+                            <button  class="btn">{{$comment->like}} <i class="fas fa-thumbs-up"></i></button>
+
+                        </form>
+
+
+
+                        <form method="post" action="{{route('comment.dislike' ,  $comment->id)}}">
+                            @csrf
+                            <input type="hidden" name="dislike" value="{{$comment->dislike}}">
+                        <button class="btn">{{$comment->dislike}} <i class="fas fa-thumbs-down"></i></button>
+                        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                 </div>
                 <div class="row">
                     <p>{{$comment->comment}}</p>
                 </div>
+
 
 
 
@@ -37,75 +69,66 @@
 
                         <form method="post" action="{{route('reply.add')}}">
                             @csrf
-
                             <input id="rep_post_id" type="hidden" value="{{$post_id}}" name="post_id">
                             <input id="parent_id" type="hidden" name="parent_id" value="{{$comment->id}}" />
                             <textarea id="rep_comment" rows="8" cols="80"  name="comment" cols="30" rows="10" class="mt-3" placeholder="متن نظر"></textarea>
-                            <button class="btn btn-primary mt-3">ارسال دیدگاه</button>
+                            <button id="rep" class="btn btn-primary mt-3">ارسال دیدگاه</button>
                         </form>
+{{--                        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>--}}
+
+{{--                        <script>--}}
+{{--                            jQuery(document).ready(function() {--}}
+{{--                                $('#rep').click(function (e){--}}
+{{--                                        e.preventDefault()       ;--}}
+{{--                                        $.ajaxSetup({--}}
+{{--                                            headers : {--}}
+{{--                                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
+{{--                                            }--}}
+{{--                                        });--}}
+
+{{--                                        $.ajax({--}}
+{{--                                            url : '{{ route('reply.add')}}' ,--}}
+{{--                                            method : 'POST' ,--}}
+{{--                                            dataType: 'JSON',--}}
+{{--                                            data : {comment : $("#rep_comment").val() ,--}}
+{{--                                                post_id : $("#rep_post_id").val() ,--}}
+{{--                                                parent_id : $("#parent_id").val()} ,--}}
+
+{{--                                            success : function (result){--}}
+{{--                                                window.location.reload();--}}
+{{--                                            }--}}
+{{--                                        })   ;--}}
+{{--                                    } ,--}}
+{{--                                )--}}
+{{--                            })  ;--}}
+{{--                        </script>--}}
+
+
+
 
                     </div>
                 </div>
 
 
                 @include('posts.comment.reply' , ['comments' => $comment->replies])
-                <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-                <script>
-                    jQuery(document).ready(function() {
-
-                        $('#ajaxSubmit').click(function (e){
-                                e.preventDefault()       ;
-
-
-                                $.ajaxSetup({
-
-                                    headers : {
-
-                                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                    }
-
-                                });
-
-                                $.ajax({
-
-                                    url : '{{ route('reply.add')}}' ,
-                                    method : 'POST' ,
-                                    dataType: 'JSON',
-                                    data : {comment : $("#rep_comment").val() ,
-                                        post_id : $("#rep_post_id").val() ,
-                                        parent_id : $("#parent_id").val()} ,
-
-                                    success : function (result){
-                                        window.location.reload();
-
-                                    }
-
-
-                                })   ;
-
-                            } ,
-                        )
-
-
-
-                    })  ;
-                </script>
 
 
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
 @endforeach
+
+
+
+
+
+
+
+
+
+
 
 
 

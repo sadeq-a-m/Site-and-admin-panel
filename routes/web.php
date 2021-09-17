@@ -57,7 +57,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function (){
 
    Route::post('/comment' , 'CommentController@store')->name('comment.store')   ;
    Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
-
+   Route::post('/like/{comment}' , 'CommentController@like')->name('comment.like');
+   Route::post('/dislike/{comment}' , 'CommentController@dislike')->name('comment.dislike') ;
 
 
 
